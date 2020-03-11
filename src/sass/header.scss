@@ -8,20 +8,6 @@
   text-align: center;
 }
 
-.text {
-  /* значение противоположное фону заполнителя */
-  color: black;
-  mix-blend-mode: difference;
-  font-family: 'Roboto', sans-serif;
-  font-weight: normal;
-}
-
-.text:after {
-  /* значение противоположное фону заполнителя */
-  color: red;
-  mix-blend-mode: difference;
-}
-
 @media (min-width: 768px) {
 }
 
