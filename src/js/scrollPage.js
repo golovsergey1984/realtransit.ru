@@ -1,8 +1,12 @@
 const nodeList = document.querySelectorAll('a[href*="#"]');
 const anchorsArray = Array.from(nodeList);
+const arrLength = anchorsArray.length;
 
 var i = 0;
-
+currentPageInner(i);
+totalPagesInner(arrLength);
+scaleListInner(arrLength);
+onChangeScaleCircleDawn(i);
 window.addEventListener('mousewheel', throttle(callback, 1000));
 
 function throttle(fn, wait) {
@@ -30,6 +34,9 @@ function scroll() {
     i = i + 1;
   }
   location = anchorsArray[i].hash;
+  currentPageInner(i);
+  onChangeScaleCircleDawn(i);
+
   /*   setTimeout(function() {
     
   }, 0); */
@@ -41,6 +48,9 @@ function scrollTop() {
     i = 0;
   }
   location = anchorsArray[i].hash;
+  currentPageInner(i);
+
+  onChangeScaleCircleUp(i);
 
   /*  setTimeout(function() {
     
@@ -51,6 +61,7 @@ document.onkeydown = function(e) {
   switch (e.keyCode) {
     case 38:
       scrollTop();
+
       break;
     case 40:
       scroll();
