@@ -3,7 +3,7 @@ const anchorsArray = Array.from(nodeList);
 
 var i = 0;
 
-window.addEventListener('wheel', throttle(callback, 2000));
+window.addEventListener('mousewheel', throttle(callback, 1000));
 
 function throttle(fn, wait) {
   var time = Date.now();
@@ -14,10 +14,6 @@ function throttle(fn, wait) {
     }
   };
 }
-
-window.onmousewheel = function() {
-  document.body.style.overflow = 'hidden';
-};
 
 function callback() {
   if (event.deltaY > 0) {
@@ -33,10 +29,10 @@ function scroll() {
   } else {
     i = i + 1;
   }
-
-  setTimeout(function() {
-    location = anchorsArray[i].hash;
-  }, 1000);
+  location = anchorsArray[i].hash;
+  /*   setTimeout(function() {
+    
+  }, 0); */
 }
 
 function scrollTop() {
@@ -44,10 +40,11 @@ function scrollTop() {
   if (i < 0) {
     i = 0;
   }
+  location = anchorsArray[i].hash;
 
-  setTimeout(function() {
-    location = anchorsArray[i].hash;
-  }, 1000);
+  /*  setTimeout(function() {
+    
+  }, 0); */
 }
 
 document.onkeydown = function(e) {
