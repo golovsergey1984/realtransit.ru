@@ -15,6 +15,10 @@ document.addEventListener('click', function(event) {
 });
 
 function hideSub(e) {
-  burger.classList.remove('change');
-  subMenu.classList.remove('show');
+  if (window.screen.width > 768) {
+    return;
+  } else {
+    burger.classList.remove('change');
+    subMenu.classList.remove('show');
+  }
 }
