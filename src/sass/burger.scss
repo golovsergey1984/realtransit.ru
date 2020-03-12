@@ -67,10 +67,10 @@
   height: 100vh;
   position: absolute;
   top: 0;
-  left: 100%;
+  left: 0;
   background-color: white;
-  opacity: 0.9;
-  min-width: 450px;
+
+  width: 100vh;
   z-index: 1;
 
   .li-item {
@@ -117,6 +117,11 @@
   .burger-text {
     visibility: visible;
   }
+  .dropdown-content {
+    min-width: 450px;
+    left: 100%;
+    opacity: 0.9;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -128,5 +133,10 @@
   }
   .burger-text {
     visibility: visible;
+  }
+  .dropdown-content {
+    min-width: 450px;
+    left: 100%;
+    opacity: 0.9;
   }
 }

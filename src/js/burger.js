@@ -13,3 +13,8 @@ document.addEventListener('click', function(event) {
     subMenu.classList.remove('show');
   }
 });
+
+function hideSub(e) {
+  burger.classList.remove('change');
+  subMenu.classList.remove('show');
+}
