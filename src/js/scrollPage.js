@@ -7,7 +7,7 @@ currentPageInner(i);
 totalPagesInner(arrLength);
 scaleListInner(arrLength);
 onChangeScaleCircleDawn(i);
-window.addEventListener('mousewheel', throttle(callback, 800));
+window.addEventListener('mousewheel', throttle(callback, 900));
 
 function throttle(fn, wait) {
   var time = Date.now();
