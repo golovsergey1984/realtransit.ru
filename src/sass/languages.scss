@@ -1,0 +1,69 @@
+.lang-box {
+  width: 8.7%;
+  height: 40px;
+  position: fixed;
+  top: 24%;
+  left: 0%;
+  transform: translateY(-50%);
+  z-index: 998;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.lang-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.flag_img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.language_btn_rus,
+.language_btn_eng {
+  cursor: pointer;
+  width: 30px;
+  height: 40px;
+  padding: 0;
+  margin: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  position: relative;
+}
+
+.cover-flag {
+  width: 30px;
+  height: 45px;
+  position: absolute;
+  background-color: rgba(rgb(255, 255, 255), 0);
+  transition: 250ms background-color;
+}
+.cover-flag:hover {
+  background-color: rgba(rgb(255, 255, 255), 0.5);
+}
+
+.hide {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .lang-box {
+    visibility: visible;
+  }
+}
+
+@media (min-width: 1200px) {
+  .lang-box {
+    visibility: visible;
+  }
+}

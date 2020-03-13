@@ -1,3 +1,13 @@
+.pop-menu {
+  width: 8.7%;
+  height: 62px;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  transform: translateY(0%);
+  text-align: center;
+}
+
 .burger-btn {
   width: 52px;
   height: 52px;
@@ -5,10 +15,10 @@
   display: inline-block;
   cursor: pointer;
   background-color: white;
-  margin-top: 30px;
-  margin-left: 30px;
   outline: none;
   padding: 0;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
 .burger-text {
@@ -39,8 +49,8 @@
 /* Крутим перый div */
 .change .bar1 {
   width: 35px;
-  -webkit-transform: rotate(-45deg) translate(-9px, 10px);
-  transform: rotate(-45deg) translate(-9px, 10px);
+  -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+  transform: rotate(-45deg) translate(-10px, 10px);
 }
 
 /* Убираем второй div */
@@ -70,7 +80,7 @@
   left: 0;
   background-color: white;
   width: 100vh;
-  z-index: 1;
+  z-index: 998;
 
   .li-item {
     padding-left: 30px;
@@ -101,7 +111,6 @@
     color: white;
   }
 }
-
 .show {
   display: block;
 }
@@ -139,3 +148,4 @@
     opacity: 0.9;
   }
 }
+

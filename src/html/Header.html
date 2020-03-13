@@ -1,27 +1,90 @@
-<div class="header">
+<div class="pop-menu header">
 
     <button type="button" id="burger-box" class="burger-btn" onclick="onChange(this)">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
-        <div class="burger-text">меню</div>
+        <div class="burger-text" data-leng="rus">меню</div>
+        <div class="burger-text hide" data-leng="eng">menu</div>
     </button>
 
+
     <ul id="dropdown-content" class="dropdown-content" onclick="hideSub(this)">
-        <li class="li-item"><a href="#create web" class="link-subMenu">Расчет стоимости сайта</a></li>
-        <li class="li-item"><a href="#service video" class="link-subMenu">Наши услуги: видео
-                ролик</a></li>
-        <li class="li-item"><a href="#rivals" class="link-subMenu">Как определить конкурентов</a></li>
-        <li class="li-item"><a href="#our numeral" class="link-subMenu">О Нас в цифрах</a></li>
-        <li class="li-item"><a href="#web working" class="link-subMenu">Заставьте сайт работать5</a></li>
-        <li class="li-item"><a href="#why we" class="link-subMenu">6 причин заказать сайт у Нас</a></li>
-        <li class="li-item"><a href="#order us" class="link-subMenu">Работая с Нами, Вы инвестируете</a></li>
-        <li class="li-item"><a href="#web dream" class="link-subMenu">Сайт Вашей мечты</a></li>
-        <li class="li-item"><a href="#buisness packing" class="link-subMenu">Слои упаковки Вашего бизнеса</a></li>
-        <li class="li-item"><a href="#reviwes" class="link-subMenu">Отзывы Наших Клиентов</a></li>
-        <li class="li-item"><a href="#geography" class="link-subMenu">География Наших работ</a></li>
-        <li class="li-item"><a href="#questions" class="link-subMenu">Остались вопросы?</a></li>
+
+        <li class=" li-item"><a href="#create web" class="link-subMenu"><span data-leng="rus">Расчет стоимости
+                    сайта</span><span class="hide" data-leng="eng">Website cost calculation</span></a></li>
+
+        <li class="li-item"><a href="#service video" class="link-subMenu"><span data-leng="rus">Наши услуги: видео
+                    ролик</span><span class="hide" data-leng="eng">Our services: video</span></a></li>
+        <li class="li-item"><a href="#rivals" class="link-subMenu"><span data-leng="rus">Как определить
+                    конкурентов</span><span class="hide" data-leng="eng">How to identify competitors</span></a></li>
+        <li class="li-item"><a href="#our numeral" class="link-subMenu"><span data-leng="rus">О Нас в
+                    цифрах</span><span class="hide" data-leng="eng">About us in numbers</span></a></li>
+        <li class="li-item"><a href="#web working" class="link-subMenu"><span data-leng="rus">Заставьте сайт
+                    работать</span><span class="hide" data-leng="eng">Make the site work</span></a></li>
+
+        <li class="li-item"><a href="#why we" class="link-subMenu"><span data-leng="rus">6 причин заказать сайт
+                    у
+                    Нас</span><span class="hide" data-leng="eng">6 reasons to order a site from
+                    us</span></a></li>
+        <li class="li-item"><a href="#order us" class="link-subMenu"><span data-leng="rus">Работая с Нами, Вы
+                    инвестируете</span><span class="hide" data-leng="eng">Working with Us, you
+                    invest</span></a></li>
+        <li class="li-item"><a href="#web dream" class="link-subMenu"><span data-leng="rus">Сайт Вашей
+                    мечты</span><span class="hide" data-leng="eng">
+                    The site of your dreams</span></a></li>
+
+        <li class="li-item"><a href="#buisness packing" class="link-subMenu"><span data-leng="rus">Слои Вашего
+                    бизнеса</span><span class="hide" data-leng="eng">
+                    Layers of your business</span></a></li>
+
+        <li class="li-item"><a href="#reviwes" class="link-subMenu"><span data-leng="rus">Отзывы Наших
+                    Клиентов</span><span class="hide" data-leng="eng">
+                    Reviews of our customers</span></a></li>
+        <li class="li-item"><a href="#geography" class="link-subMenu"><span data-leng="rus">География Наших
+                    работ</span><span class="hide" data-leng="eng">Geography of our work</span></a></li>
+
+        <li class="li-item"><a href="#questions" class="link-subMenu"><span data-leng="rus">Остались
+                    вопросы?</span><span class="hide" data-leng="eng">Still have questions?</span></a></li>
+
+
     </ul>
 
 
 </div>
+
+<!-- <ul id="dropdown-content" class="dropdown-content" onclick="hideSub(this)">
+        <li class=" li-item"><a href="#create web" class="link-subMenu"><span data-leng="rus">Расчет стоимости
+                    сайта</span><span class="hide" data-leng="eng">Website cost calculation</span></a></li>
+
+        <li class="li-item"><a href="#create web" class="link-subMenu"><span data-leng="rus">Наши услуги: видео
+                    ролик</span><span class="hide" data-leng="eng">Our services: video</span></a></li>
+        <li class="li-item"><a href="#create web" class="link-subMenu"><span data-leng="rus">Как определить
+                    конкурентов</span><span class="hide" data-leng="eng">How to identify competitors</span></a></li>
+        <li class="li-item"><a href="#create web" class="link-subMenu"><span data-leng="rus">О Нас в цифрах</span><span
+                    class="hide" data-leng="eng">About us in numbers</span></a></li>
+        <li class="li-item"><a href="#create web" class="link-subMenu"><span data-leng="rus">Заставьте сайт
+                    работать</span><span class="hide" data-leng="eng">Make the site work</span></a></li>
+
+        <li class="li-item"><a href="#create web" class="link-subMenu"><span data-leng="rus">6 причин заказать сайт у
+                    Нас</span><span class="hide" data-leng="eng">6 reasons to order a site from
+                    us</span></a></li>
+        <li class="li-item"><a href="#create web" class="link-subMenu"><span data-leng="rus">Работая с Нами, Вы
+                    инвестируете</span><span class="hide" data-leng="eng">Working with Us, you
+                    invest</span></a></li>
+        <li class="li-item"><a href="#create web" class="link-subMenu"><span data-leng="rus">Сайт Вашей
+                    мечты</span><span class="hide" data-leng="eng">
+                    The site of your dreams</span></a></li>
+
+        <li class="li-item"><a href="#create web" class="link-subMenu"><span data-leng="rus">Слои Вашего
+                    бизнеса</span><span class="hide" data-leng="eng">
+                    Layers of your business</span></a></li>
+
+        <li class="li-item"><a href="#create web" class="link-subMenu"><span data-leng="rus">Отзывы Наших
+                    Клиентов</span><span class="hide" data-leng="eng">
+                    Reviews of our customers</span></a></li>
+        <li class="li-item"><a href="#create web" class="link-subMenu"><span data-leng="rus">География Наших
+                    работ</span><span class="hide" data-leng="eng">Geography of our work</span></a></li>
+
+        <li class="li-item"><a href="#create web" class="link-subMenu"><span data-leng="rus">Остались
+                    вопросы?</span><span class="hide" data-leng="eng">Still have questions?</span></a></li> -->
