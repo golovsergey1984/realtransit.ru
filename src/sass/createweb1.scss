@@ -1,11 +1,11 @@
 .devices-img {
   background-image: url('../images/Create_web/Devices.svg');
-  width: 300px;
-  height: 100vh;
+  width: 350px;
+  height: 350px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: absolute;
-  top: 10%;
+  top: 35%;
   left: 52%;
   transform: translateX(-50%);
 }
@@ -92,11 +92,11 @@ input:focus::-webkit-input-placeholder {
 
 @media (min-width: 768px) {
   .devices-img {
-    width: 400px;
-    height: 100vh;
+    width: 500px;
+    height: 400px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    top: 10%;
+    top: 35%;
   }
   .input-phone {
     width: 440px;
@@ -118,11 +118,12 @@ input:focus::-webkit-input-placeholder {
 
 @media (min-width: 1200px) {
   .devices-img {
-    width: 500px;
-    height: 100vh;
+    width: 600px;
+    height: 400px;
+    /*   background-color: black; */
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    top: 10%;
+    top: 35%;
   }
   .input-phone {
     width: 440px;
