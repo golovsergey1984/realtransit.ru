@@ -7,7 +7,7 @@ currentPageInner(i);
 totalPagesInner(arrLength);
 scaleListInner(arrLength);
 onChangeScaleCircleDawn(i);
-window.addEventListener('mousewheel', throttle(callback, 900));
+window.addEventListener('mousewheel', throttle(callback, 800));
 
 function throttle(fn, wait) {
   var time = Date.now();
@@ -36,10 +36,6 @@ function scroll() {
   location = anchorsArray[i].hash;
   currentPageInner(i);
   onChangeScaleCircleDawn(i);
-
-  /*   setTimeout(function() {
-    
-  }, 0); */
 }
 
 function scrollTop() {
@@ -49,12 +45,7 @@ function scrollTop() {
   }
   location = anchorsArray[i].hash;
   currentPageInner(i);
-
   onChangeScaleCircleUp(i);
-
-  /*  setTimeout(function() {
-    
-  }, 0); */
 }
 
 document.onkeydown = function(e) {

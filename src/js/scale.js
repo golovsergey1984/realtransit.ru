@@ -16,12 +16,21 @@ function currentPageInner(i) {
 function scaleListInner(arrLength) {
   const scaleList = document.getElementById('scale-list');
 
+  console.log(i);
   for (var a = 0; a < arrLength; a = a + 1) {
-    const li = document.createElement('li');
-    scaleList.appendChild(li);
     const circle = document.createElement('div');
+    const hrefNavCircle = document.createElement('a');
+    const li = document.createElement('li');
+    li.className = 'li-scale';
+    hrefNavCircle.className = 'scale-href';
+    hrefNavCircle.href = anchorsArray[a].hash;
+
+    li.appendChild(hrefNavCircle);
     circle.className = 'scale-circle';
-    li.appendChild(circle);
+    hrefNavCircle.appendChild(circle);
+
+    li.setAttribute('onclick', "console.log('blah');");
+    scaleList.appendChild(li);
   }
 }
 

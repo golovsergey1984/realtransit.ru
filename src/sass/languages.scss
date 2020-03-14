@@ -34,7 +34,7 @@
   width: 30px;
   height: 40px;
   padding: 0;
-  margin: 10px;
+  margin: 5px;
   border: none;
   outline: none;
   background-color: transparent;
@@ -52,6 +52,17 @@
   background-color: rgba(rgb(255, 255, 255), 0.5);
 }
 
+.cover-flag_onload {
+  width: 30px;
+  height: 45px;
+  position: absolute;
+  background-color: rgba(rgb(255, 255, 255), 0.5);
+  transition: 250ms background-color;
+}
+
+.cover-flag_onload:hover {
+  background-color: rgba(rgb(255, 255, 255), 0);
+}
 .hide {
   display: none;
 }

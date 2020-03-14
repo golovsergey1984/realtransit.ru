@@ -2,12 +2,13 @@
 
 <div class="bgimage bg-Slide1 top-bdr-radius">
     <a name="create web"></a>
-    <h1 class="h1" data-leng="rus">Создадим сайт, который за 1 месяц приведет от <br><span class="red boild">от 10
+    <h1 class="h1" data-leng="rus">Создадим сайт, который за 1 месяц приведет<br><span class="red-txt boild">от 10
             до 1000 клиентов</span> с гарантией результата!</h1>
     <h1 class="h1 hide" data-leng="eng">We will create a website that will lead per 1 month
-        <br><span class="red boild">from 10 to 1000 customers</span> with a guaranteed result!</h1>
-    <image src="./images/Create web/Monitors.png" class="devices-img" title="responsive web" alt="responsive web">
-    </image>
+        <br><span class="red-txt boild">from 10 to 1000 customers</span> with a guaranteed result!</h1>
+    <div class="devices-img"></div>
+
+
     <div class="box-phone">
         <div class="box-phone-text ">
             <span class="phone-text " data-leng="rus">Узнайте стоимость</span>
@@ -16,22 +17,29 @@
         <div class="box-phone-text">
             <span class="phone-text" data-leng="rus">Разработки Вашего сайта за 5 минут!</span>
             <span class="phone-text hide" data-leng="eng">Develop your site in 5 minutes!</span>
+
         </div>
-        <form>
-            <input type="input" class="input-phone" data-leng="rus" placeholder="Введите телефон">
-            <input type="input" class="input-phone hide" data-leng="eng" placeholder="Enter your telephone number">
-            <button type="button" class="button-phone">
 
+        <input type="tel" class=" input-phone" data-leng="rus"
+            pattern="^((8|\+7)[\-]?)?(\(?\d{3}\)?[\-]?)?[\d\-]{7,10}$" required placeholder="Введите телефон">
+        <input type="tel" pattern="[0-9]{5,12}" class="input-phone hide" data-leng="eng"
+            placeholder="Enter your telephone number">
+        <button type="submit" class="button-phone" onclick="clientNumber()">
 
+            <svg class="plane-box" xmlns="http://www.w3.org/2000/svg">
+                <path class="plane-path"
+                    d="M13.733 19.223l-.579 8.144c.829 0 1.188-.356 1.618-.783l3.883-3.712 8.047 5.893c1.476.823 2.516.39 2.914-1.358l5.282-24.75.002-.002c.468-2.181-.79-3.035-2.227-2.5L1.625 12.043c-2.12.823-2.087 2.004-.36 2.54l7.937 2.468L27.64 5.514c.868-.575 1.657-.257 1.008.317L13.733 19.224z" />
+            </svg>
+        </button>
 
+        <div class="phone-line"></div>
+        <div class="box-phone-text left">
+            <span class="format-phone" data-leng="rus">В формате: +38 012 345 67 89 </span>
+            <span class="format-phone hide" data-leng="eng">Format: +38 012 345 67 89</span>
+        </div>
 
-
-            </button>
-            <div class="phone-line"></div>
-            <div class="box-phone-text left">
-                <span class="format-phone" data-leng="rus">В формате: +38 012 345 67 89</span>
-                <span class="format-phone hide" data-leng="eng">Format: +38 012 345 67 89</span>
-            </div>
-        </form>
     </div>
 </div>
+
+<script>
+</script>

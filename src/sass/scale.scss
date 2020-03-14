@@ -46,6 +46,7 @@
   margin: 0;
   list-style-type: none;
   text-align: center;
+  line-height: 25px;
 }
 
 .scale-circle {
@@ -54,10 +55,16 @@
   background-color: #e5e5e5;
   border-radius: 100%;
   display: inline-block;
-  margin-top: 12px;
+  cursor: pointer;
 }
 
 .active {
+  background-color: #ff0000;
+  width: 14px;
+  height: 14px;
+}
+
+.scale-circle:hover {
   background-color: #ff0000;
   width: 14px;
   height: 14px;
