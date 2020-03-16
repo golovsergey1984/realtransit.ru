@@ -1,0 +1,27 @@
+.mouse-box {
+  width: 8.7%;
+  position: fixed;
+  top: 90%;
+  left: 0%;
+  z-index: 998;
+}
+
+.mouse-svg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  animation: move 2s infinite alternate;
+}
+
+.mouse-move {
+}
+@keyframes move {
+  from {
+    top: -20px;
+  }
+  to {
+    bottom: 0;
+  }
+}

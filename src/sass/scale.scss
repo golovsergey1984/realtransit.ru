@@ -56,18 +56,17 @@
   border-radius: 100%;
   display: inline-block;
   cursor: pointer;
+  transition: all 0.1s ease-out;
 }
 
 .active {
   background-color: #ff0000;
-  width: 14px;
-  height: 14px;
+  transform: scale(2);
 }
 
 .scale-circle:hover {
   background-color: #ff0000;
-  width: 14px;
-  height: 14px;
+  transform: scale(2);
 }
 
 @media (min-width: 768px) {

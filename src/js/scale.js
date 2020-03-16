@@ -16,7 +16,6 @@ function currentPageInner(i) {
 function scaleListInner(arrLength) {
   const scaleList = document.getElementById('scale-list');
 
-  console.log(i);
   for (var a = 0; a < arrLength; a = a + 1) {
     const circle = document.createElement('div');
     const hrefNavCircle = document.createElement('a');
@@ -29,28 +28,60 @@ function scaleListInner(arrLength) {
     circle.className = 'scale-circle';
     hrefNavCircle.appendChild(circle);
 
-    li.setAttribute('onclick', "console.log('blah');");
+    li.setAttribute('onclick', 'changeCircleScale(this) ');
     scaleList.appendChild(li);
   }
 }
 
-function onChangeScaleCircleDawn(i) {
+/* function onChangeScaleCircleDawn(i) {
   const nodeCircle = document.querySelectorAll('.scale-circle');
   const arrCircle = Array.from(nodeCircle);
+  for (let a = 0; a < arrCircle.length; a++) {
+    arrCircle[a].classList.remove('active');
+  }
   arrCircle[i].classList.add('active');
 
   if (i === 0) {
     return;
-  } else {
-    i = i - 1;
-    arrCircle[i].classList.remove('active');
+  }
+} */
+
+function onChangeScaleCircle(i) {
+  const nodeCircle = document.querySelectorAll('.scale-circle');
+  const arrCircle = Array.from(nodeCircle);
+  for (let a = 0; a < arrCircle.length; a++) {
+    arrCircle[a].classList.remove('active');
+  }
+  arrCircle[i].classList.add('active');
+
+  if (i === 0) {
+    return;
   }
 }
 
-function onChangeScaleCircleUp(i) {
+/* function onChangeScaleCircleUp(i) {
   const nodeCircle = document.querySelectorAll('.scale-circle');
   const arrCircle = Array.from(nodeCircle);
+  for (let a = 0; a < arrCircle.length; a++) {
+    arrCircle[a].classList.remove('active');
+  }
   arrCircle[i].classList.add('active');
   i = i + 1;
   arrCircle[i].classList.remove('active');
+} */
+
+function changeCircleScale(e) {
+  var a = 0;
+  for (a = 0; a < anchorsArray.length; a++) {
+    if (anchorsArray[a].hash === e.children[0].hash) {
+      if (a === 0) {
+        showMenuItems();
+      } else {
+        hideMenuItems();
+      }
+
+      currentPageInner(a);
+      onChangeScaleCircle(a);
+    }
+  }
 }

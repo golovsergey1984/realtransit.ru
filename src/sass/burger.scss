@@ -1,11 +1,8 @@
 .pop-menu {
-  width: 8.7%;
-  height: 62px;
+  width: 8.6%;
   position: fixed;
-  top: 0%;
-  left: 0%;
-  transform: translateY(0%);
-  text-align: center;
+  float: left;
+  z-index: 1000;
 }
 
 .burger-btn {
@@ -17,8 +14,8 @@
   background-color: white;
   outline: none;
   padding: 0;
-  margin-top: 30px;
-  margin-left: 30px;
+  /*   margin-top: 10px; */
+  margin-left: 10px;
 }
 
 .burger-text {
@@ -117,16 +114,18 @@
 
 @media (min-width: 768px) {
   .burger-btn {
-    height: 70px;
+    height: 50px;
     border: none;
     background: transparent;
     margin-left: 0px;
+    margin-top: 0;
+    margin-left: 0;
   }
   .burger-text {
     visibility: visible;
   }
   .dropdown-content {
-    width: 480px;
+    width: 400px;
     left: 100%;
     opacity: 0.9;
   }
@@ -134,16 +133,18 @@
 
 @media (min-width: 1200px) {
   .burger-btn {
-    height: 70px;
+    height: 50px;
     border: none;
     background: transparent;
-    margin-left: 0px;
+
+    margin-top: 0;
+    margin-left: 0;
   }
   .burger-text {
     visibility: visible;
   }
   .dropdown-content {
-    min-width: 450px;
+    width: 400px;
     left: 100%;
     opacity: 0.9;
   }

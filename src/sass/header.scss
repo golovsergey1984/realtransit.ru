@@ -1,15 +1,243 @@
 .header {
-  width: 8%;
+  width: 100%;
+  height: 16%;
   float: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
   position: fixed;
   top: 0%;
   left: 0%;
   z-index: 998;
   text-align: center;
+  background: transparent;
+}
+.none {
+  visibility: hidden;
+}
+
+.line-height {
+  line-height: 20px;
+}
+
+.Hmenu-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-align: center;
+  line-height: 100%;
+}
+
+.menuuu-btn {
+  width: 10%;
+}
+
+.quote {
+  width: 13.7%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 400;
+  text-align: left;
+  padding-left: 59px;
+  display: none;
+}
+
+.schedule {
+  width: 13%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 400;
+  text-align: left;
+  padding-left: 59px;
+  display: none;
+}
+
+.logo-img {
+  width: 27.3%;
+  display: none;
+}
+
+.Hmenu-logo {
+  width: 99px;
+  height: 85px;
+}
+.messengers {
+  width: 15%;
+  /* padding-right: 19px; */
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 400;
+  text-align: left;
+  display: none;
+}
+
+.messengers-box {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mes-wifi-box {
+  margin-right: 10px;
+  cursor: pointer;
+  .wifi-svg {
+    transition-duration: 0.2s;
+  }
+  .wifi-svg-over {
+    fill: rgb(0, 0, 87);
+    transition-duration: 0.2s;
+  }
+}
+
+.mes-wifi-box:hover {
+  .wifi-svg {
+    transform: translate(0, -40px);
+    transition-duration: 0.4s;
+  }
+  .wifi-svg-over {
+    transform: translate(0, 0);
+    transition-duration: 0.4s;
+  }
+}
+
+.mes-plane-box {
+  margin-right: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  .plane-svg {
+    transition-duration: 0.2s;
+  }
+  .plane-svg-over {
+    /* stroke: red; */
+    fill: red;
+    transition-duration: 0.2s;
+  }
+}
+
+.mes-plane-box:hover {
+  .plane-svg {
+    transform: translate(0, -40px);
+    transition-duration: 0.4s;
+  }
+  .plane-svg-over {
+    transform: translate(0, 0);
+    transition-duration: 0.4s;
+  }
+}
+
+.mes-whatsapp-box {
+  margin-right: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  .whatsapp-svg {
+    transition-duration: 0.2s;
+  }
+  .whatsapp-svg-over {
+    /* stroke: red; */
+    fill: green;
+    transition-duration: 0.2s;
+  }
+}
+
+.mes-whatsapp-box:hover {
+  .whatsapp-svg {
+    transform: translate(0, -40px);
+    transition-duration: 0.4s;
+  }
+  .whatsapp-svg-over {
+    transform: translate(0, 0);
+    transition-duration: 0.4s;
+  }
+}
+
+.call-us {
+  width: 21%;
+  font-family: 'CeraPro';
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 500;
+  text-align: left;
+  /* padding-right: 40px; */
+  display: none;
+  cursor: pointer;
+  .call-svg-box {
+    float: left;
+    overflow: hidden;
+  }
+  .call-svg {
+    transition-duration: 0.2s;
+  }
+
+  .call-svg-over {
+    stroke: red;
+    transition-duration: 0.2s;
+  }
+  .call-phone {
+    font-size: 20px;
+  }
+}
+
+.call-us:hover {
+  .call-svg {
+    transform: translate(0, -50px);
+    transition-duration: 0.4s;
+  }
+  .call-svg-over {
+    transform: translate(0, 0);
+    transition-duration: 0.4s;
+  }
+  .call-phone {
+    color: red;
+  }
 }
 
 @media (min-width: 768px) {
+  .quote {
+    display: block;
+    padding-left: 0;
+  }
+  .schedule {
+    display: block;
+    padding-left: 0;
+  }
+
+  .logo-img {
+    display: block;
+  }
+  .messengers {
+    display: block;
+  }
+  .call-us {
+    display: block;
+  }
 }
 
 @media (min-width: 1200px) {
+  .quote {
+    display: block;
+  }
+  .schedule {
+    display: block;
+  }
+
+  .logo-img {
+    display: block;
+  }
+  .messengers {
+    display: block;
+  }
+  .call-us {
+    display: block;
+  }
 }

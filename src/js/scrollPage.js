@@ -6,7 +6,8 @@ var i = 0;
 currentPageInner(i);
 totalPagesInner(arrLength);
 scaleListInner(arrLength);
-onChangeScaleCircleDawn(i);
+onChangeScaleCircle(i);
+/* onChangeScaleCircleDawn(i); */
 window.addEventListener('mousewheel', throttle(callback, 800));
 
 function throttle(fn, wait) {
@@ -33,19 +34,29 @@ function scroll() {
   } else {
     i = i + 1;
   }
+  if (i > 0) {
+    hideMenuItems();
+  }
   location = anchorsArray[i].hash;
   currentPageInner(i);
-  onChangeScaleCircleDawn(i);
+  onChangeScaleCircle(i);
+  getColor(i);
+  /* onChangeScaleCircleDawn(i); */
 }
 
 function scrollTop() {
   i = i - 1;
+  if (i === 0) {
+    showMenuItems();
+  }
   if (i < 0) {
     i = 0;
   }
   location = anchorsArray[i].hash;
   currentPageInner(i);
-  onChangeScaleCircleUp(i);
+  onChangeScaleCircle(i);
+  getColor(i);
+  /* onChangeScaleCircleUp(i); */
 }
 
 document.onkeydown = function(e) {
@@ -59,3 +70,13 @@ document.onkeydown = function(e) {
       break;
   }
 };
+
+function hideMenuItems() {
+  document.querySelector('.messengers').classList.add('none');
+  document.querySelector('.schedule').classList.add('none');
+}
+
+function showMenuItems() {
+  document.querySelector('.messengers').classList.remove('none');
+  document.querySelector('.schedule').classList.remove('none');
+}
