@@ -30,15 +30,9 @@
   line-height: 100%;
 }
 
-.menuuu-btn {
+.btn-menu {
   width: 8.7%;
-  /*  background-color: green; */
   padding-left: 5px;
-}
-
-.padding {
-  margin-left: 59px;
-  /* background-color: yellow; */
 }
 
 .quote {
@@ -49,10 +43,7 @@
   font-weight: 400;
   text-align: left;
   margin-left: 64px;
-
-  /*  padding-right: 59px; */
   display: none;
-  /*  background-color: red; */
 }
 
 .schedule {
@@ -62,7 +53,6 @@
   line-height: normal;
   font-weight: 400;
   text-align: left;
-  padding-left: 59px;
   display: none;
 }
 
@@ -77,7 +67,6 @@
 }
 .messengers {
   width: 15%;
-  /* padding-right: 19px; */
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: normal;
@@ -104,6 +93,10 @@
   .wifi-svg {
     transition-duration: 0.2s;
   }
+  .wifi-svg-img {
+    width: 29px;
+    height: 29px;
+  }
   .wifi-svg-over {
     fill: rgb(0, 0, 87);
     transition-duration: 0.2s;
@@ -115,6 +108,7 @@
     transform: translate(0, -40px);
     transition-duration: 0.4s;
   }
+
   .wifi-svg-over {
     transform: translate(0, 0);
     transition-duration: 0.4s;
@@ -128,8 +122,11 @@
   .plane-svg {
     transition-duration: 0.2s;
   }
+  .plane-svg-img {
+    width: 35px;
+    height: 29px;
+  }
   .plane-svg-over {
-    /* stroke: red; */
     fill: red;
     transition-duration: 0.2s;
   }
@@ -153,8 +150,11 @@
   .whatsapp-svg {
     transition-duration: 0.2s;
   }
+  .whatsapp-svg-img {
+    width: 29px;
+    height: 29px;
+  }
   .whatsapp-svg-over {
-    /* stroke: red; */
     fill: green;
     transition-duration: 0.2s;
   }
@@ -165,6 +165,7 @@
     transform: translate(0, -40px);
     transition-duration: 0.4s;
   }
+
   .whatsapp-svg-over {
     transform: translate(0, 0);
     transition-duration: 0.4s;
@@ -178,12 +179,16 @@
   line-height: normal;
   font-weight: 500;
   text-align: left;
-  /* padding-right: 40px; */
   display: none;
   cursor: pointer;
   .call-svg-box {
     float: left;
     overflow: hidden;
+  }
+
+  .call-svg-img {
+    width: 39px;
+    height: 38px;
   }
   .call-svg {
     transition-duration: 0.2s;
@@ -195,6 +200,7 @@
   }
   .call-phone {
     font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -213,39 +219,136 @@
 }
 
 @media (min-width: 768px) {
+  .btn-menu {
+    width: 8%;
+  }
   .quote {
     display: block;
+    margin-left: 10px;
+    width: 20%;
+    font-size: 12px;
   }
   .schedule {
     display: block;
+    padding-left: 10px;
+    width: 16%;
+    font-size: 12px;
   }
 
   .logo-img {
     display: block;
+    width: 14%;
   }
   .messengers {
     display: block;
+    width: 14%;
+    font-size: 12px;
+    padding-left: 20px;
+  }
+  .mes-wifi-box {
+    margin-right: 7px;
+
+    .wifi-svg-img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .mes-plane-box {
+    margin-right: 7px;
+    .plane-svg-img {
+      width: 27px;
+      height: 21px;
+    }
+  }
+
+  .mes-whatsapp-box {
+    .whatsapp-svg-img {
+      width: 23px;
+      height: 23px;
+    }
   }
   .call-us {
     display: block;
+    font-size: 12px;
+    .call-phone {
+      font-size: 14px;
+    }
+    .call-svg-img {
+      width: 34px;
+      height: 33px;
+    }
+  }
+  .call-phone {
+    font-size: 24px;
+    line-height: 33px;
   }
 }
 
 @media (min-width: 1200px) {
+  .btn-menu {
+    width: 8.7%;
+  }
   .quote {
+    width: 15%;
     display: block;
+    margin-left: 64px;
+    font-size: 14px;
   }
   .schedule {
+    width: 13.5%;
     display: block;
+    font-size: 14px;
   }
 
   .logo-img {
     display: block;
+    width: 27.3%;
+    font-size: 14px;
   }
   .messengers {
     display: block;
+    width: 13%;
+    font-size: 14px;
+    padding-left: 0px;
+  }
+
+  .mes-wifi-box {
+    margin-right: 10px;
+
+    .wifi-svg-img {
+      width: 29px;
+      height: 29px;
+    }
+  }
+
+  .mes-plane-box {
+    margin-right: 14px;
+    .plane-svg-img {
+      width: 35px;
+      height: 29px;
+    }
+  }
+
+  .mes-whatsapp-box {
+    .whatsapp-svg-img {
+      width: 29px;
+      height: 29px;
+    }
   }
   .call-us {
     display: block;
+    font-size: 15px;
+    .call-phone {
+      font-size: 20px;
+    }
+    .call-svg-img {
+      width: 39px;
+      height: 38px;
+    }
+  }
+  .call-phone {
+    font-size: 20px;
+    line-height: 30px;
   }
 }

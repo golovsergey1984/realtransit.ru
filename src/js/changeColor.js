@@ -2,16 +2,39 @@ function getColor(i) {
   var nodeBgImage = document.querySelectorAll('.bgimage');
   const bgImage = Array.from(nodeBgImage);
 
-  var style = document.defaultView
-    .getComputedStyle(bgImage[i], null)
-    .getPropertyValue('background-color');
+  const darkColor = 'dark';
+  const brightColor = 'bright';
 
-  console.log(document.defaultView.getComputedStyle(bgImage[i], null));
-  let darkColor = 'rgba(0, 0, 0, 0)';
-  let brightСolor = 'rgb(246, 246, 246)';
-  if (style === darkColor) {
-    console.log('Темный фон: ' + darkColor);
+  const currentColor = bgImage[i].getAttribute('data-bgc');
+  const nodeMenuListColorOnChange = document.querySelectorAll(
+    '[data-color="text change"]',
+  );
+  const menuListColorOnChange = Array.from(nodeMenuListColorOnChange);
+
+  const menuListSvgColorOnChange = document.querySelector(
+    '[data-color="svg change"]',
+  );
+  const menuPhoneColorOnChange = document.querySelector(
+    '[data-color="phone change"]',
+  );
+
+  const logo = document.querySelector('.Hmenu-logo');
+
+  if (currentColor === darkColor) {
+    for (let count = 0; count < menuListColorOnChange.length; count++) {
+      menuListColorOnChange[count].classList.remove('grey');
+      menuListColorOnChange[count].classList.add('white-text');
+    }
+    menuPhoneColorOnChange.classList.remove('nearly-black');
+    menuPhoneColorOnChange.classList.add('white-text');
+    menuListSvgColorOnChange.style.stroke = 'white';
+    logo.src = './images/logo_hover.png';
   } else {
-    console.log('Светлый фон: ' + brightСolor);
+    for (let count = 0; count < menuListColorOnChange.length; count++) {
+      menuListColorOnChange[count].classList.add('grey');
+    }
+    menuPhoneColorOnChange.classList.add('nearly-black');
+    menuListSvgColorOnChange.style.stroke = '';
+    logo.src = './images/logo.png';
   }
 }

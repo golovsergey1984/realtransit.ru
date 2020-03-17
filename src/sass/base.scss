@@ -2,14 +2,14 @@ html {
   box-sizing: border-box;
 
   scroll-behavior: smooth;
-  background-color: #e5e5e5;
+  background-color: white;
   -moz-scrollbars-vertical: hidden;
 }
 
 ::-webkit-scrollbar {
   /* chrome based */
   width: 0px; /* ширина scrollbar'a */
-  background: transparent; /* опционально */
+  /*  background: transparent;  */ /* опционально */
 }
 
 *::before,

@@ -1,12 +1,12 @@
 .devices-img {
-  background-image: url('../images/Create_web/Devices.svg');
+  background-image: url('../images/Create_web/Devices.png');
   width: 300px;
   height: 300px;
   background-repeat: no-repeat;
   background-size: contain;
   /* background-size: 100% 100%; */
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 52%;
   transform: translateX(-50%);
 }
@@ -94,16 +94,16 @@ input:focus::-webkit-input-placeholder {
 
 @media (min-width: 768px) {
   .devices-img {
-    width: 400px;
+    width: 390px;
     height: 300px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     /* background-size: 100% 100%; */
-    top: 35%;
+    top: 34%;
   }
   .input-phone {
-    width: 440px;
+    width: 300px;
     height: 60px;
     margin-top: 0px;
   }
@@ -122,14 +122,14 @@ input:focus::-webkit-input-placeholder {
 
 @media (min-width: 1200px) {
   .devices-img {
-    width: 600px;
+    width: 380px;
     height: 350px;
     /*  background-color: black; */
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     /* background-size: 100% 100%; */
-    top: 35%;
+    top: 30%;
   }
   .input-phone {
     width: 440px;

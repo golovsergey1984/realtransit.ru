@@ -4,6 +4,7 @@
   top: 90%;
   left: 0%;
   z-index: 998;
+  display: none;
 }
 
 .mouse-svg {
@@ -23,5 +24,17 @@
   }
   to {
     bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .mouse-box {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mouse-box {
+    display: block;
   }
 }
