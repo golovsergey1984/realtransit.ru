@@ -1,0 +1,348 @@
+.Rivals-box {
+  width: 100%;
+  height: 100vh;
+  /*  background-color: yellow; */
+}
+
+.rivals-title {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #333333;
+}
+
+.rivals-h2 {
+  font-size: 30px;
+}
+
+.rivals-subtitle {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.rivals-top {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.rivals-img-1 {
+  width: 20%;
+  height: 100px;
+  background-image: url('../images/rivals/stage_1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /*   background-color: #fff; */
+}
+
+.rivals-img-2 {
+  width: 30%;
+  background-image: url('../images/rivals/stage_2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /*  background-color: green; */
+}
+.rivals-img-3 {
+  width: 30%;
+  background-image: url('../images/rivals/stage_3.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /*  background-color: purple; */
+}
+.rivals-img-4 {
+  width: 20%;
+  background-image: url('../images/rivals/stage_4.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /*   background-color: orangered; */
+}
+.rivals-img-point {
+  width: 80%;
+  height: 30px;
+  /*  background-color: blue; */
+  background-image: url(../images/rivals/points_group.svg);
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+}
+.rivals-car {
+  position: absolute;
+  top: 0;
+  left: -2%;
+}
+
+.move-car-fwd-section-1 {
+  animation: ride1 1s;
+  animation-fill-mode: forwards;
+  @-webkit-keyframes ride1 {
+    0% {
+      left: -2%;
+    }
+    100% {
+      left: 25%;
+    }
+  }
+}
+
+.move-car-fwd-section-2 {
+  animation: ride2 1s;
+  animation-fill-mode: forwards;
+  @-webkit-keyframes ride2 {
+    0% {
+      left: 25%;
+    }
+    100% {
+      left: 66%;
+    }
+  }
+}
+.move-car-fwd-section-3 {
+  animation: ride3 1s;
+  animation-fill-mode: forwards;
+  @-webkit-keyframes ride3 {
+    0% {
+      left: 66%;
+    }
+    100% {
+      left: 85%;
+    }
+  }
+}
+
+.move-car-fwd-section-4 {
+  animation: ride4 1s;
+  animation-fill-mode: forwards;
+  @-webkit-keyframes ride4 {
+    0% {
+      left: 85%;
+    }
+    100% {
+      left: -2%;
+    }
+  }
+}
+
+.way-point-1 {
+  width: 27%;
+  height: 30px;
+  /* background-color: green; */
+}
+.way-point-2 {
+  width: 40%;
+  height: 30px;
+  /* background-color: rgb(230, 214, 0); */
+}
+.way-point-3 {
+  width: 33%;
+  height: 30px;
+  /* background-color: rgb(230, 0, 153); */
+}
+
+.rivals-bottom {
+  width: 100%;
+  height: 55%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 300px;
+}
+
+.rivals-circle {
+  width: 280px;
+  height: 280px;
+  border-radius: 100%;
+  box-shadow: 0 0 0 205px rgba(255, 255, 255, 0.3);
+}
+
+.rivals-circle-two {
+  width: 100%;
+  height: 280px;
+  border-radius: 100%;
+  box-shadow: 0 0 0 40px rgba(255, 255, 255, 0.7);
+}
+
+.rivals-circle-three {
+  width: 100%;
+  height: 280px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+}
+
+.rivals-working-circle {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.rivals-circle-top {
+  width: 100%;
+  height: 140px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  background-color: #c6c6c6;
+}
+.rivals-circle-bottom {
+  width: 100%;
+  height: 140px;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  background-color: #ffffff;
+}
+
+.rivals-circle-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 90%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.rivals-nav-li {
+  width: 25px;
+  height: 20px;
+}
+.nav-rivals-li {
+  width: 7px;
+  height: 7px;
+  margin: auto auto;
+  border-radius: 100%;
+  background-color: #ededed;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+}
+
+.nav-rivals-li:hover {
+  background-color: #ff0000;
+  transform: scale(2);
+}
+
+.rival-arrow-left {
+  width: 40px;
+  height: 280px;
+}
+
+.rival-arrow-right {
+  width: 80px;
+  height: 280px;
+  position: relative;
+  .rival-btn-right {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    box-shadow: 0px 0px 10px rgba(239, 0, 6, 0.5);
+    cursor: pointer;
+
+    .arrow-line-right {
+      height: 10px;
+      width: 10px;
+      position: absolute;
+      left: 25%;
+    }
+    .arrow-line-right-top,
+    .arrow-line-right-bottom {
+      background: #ffffff;
+      height: 2px;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 15px;
+    }
+    .arrow-line-right-top {
+      top: 0px;
+    }
+    .arrow-line-right-top {
+      transform: rotate(45deg);
+      transform-origin: bottom right;
+    }
+    .arrow-line-right-bottom {
+      transform: rotate(-45deg);
+      transform-origin: top right;
+    }
+  }
+}
+
+.rival-btn-right:hover {
+  background-color: #fff;
+  .arrow-line-right-top,
+  .arrow-line-right-bottom {
+    background: red;
+  }
+}
+
+.rival-arrow-left {
+  width: 80px;
+  height: 280px;
+  position: relative;
+  .rival-btn-left {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    box-shadow: 0px 0px 10px rgba(239, 0, 6, 0.5);
+    /*  margin-right: 30px; */
+    cursor: pointer;
+    .arrow-line-left {
+      height: 10px;
+      width: 10px;
+      position: absolute;
+      left: 30%;
+    }
+    .arrow-line-left-top,
+    .arrow-line-left-bottom {
+      background: #ffffff;
+      height: 2px;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 15px;
+    }
+    .arrow-line-left-top {
+      top: 0px;
+    }
+    .arrow-line-left-top {
+      transform: rotate(45deg);
+      transform-origin: bottom left;
+    }
+    .arrow-line-left-bottom {
+      transform: rotate(-45deg);
+      transform-origin: top left;
+    }
+  }
+}
+
+.rival-btn-left:hover {
+  background-color: #fff;
+  .arrow-line-left-top,
+  .arrow-line-left-bottom {
+    background: red;
+  }
+}
