@@ -7,7 +7,7 @@ currentPageInner(i);
 totalPagesInner(arrLength);
 scaleListInner(arrLength);
 onChangeScaleCircle(i);
-/* onChangeScaleCircleDawn(i); */
+
 window.addEventListener('mousewheel', throttle(callback, 800));
 
 function throttle(fn, wait) {
@@ -41,7 +41,6 @@ function scroll() {
   currentPageInner(i);
   onChangeScaleCircle(i);
   getColor(i);
-  /* onChangeScaleCircleDawn(i); */
 }
 
 function scrollTop() {
@@ -56,7 +55,6 @@ function scrollTop() {
   currentPageInner(i);
   onChangeScaleCircle(i);
   getColor(i);
-  /* onChangeScaleCircleUp(i); */
 }
 
 document.onkeydown = function(e) {
@@ -74,15 +72,9 @@ document.onkeydown = function(e) {
 function hideMenuItems() {
   document.querySelector('.messengers').classList.add('none');
   document.querySelector('.schedule').classList.add('none');
-  /*   document.querySelector('.contant-phone').classList.add('none'); */
-  /*  document.querySelector('[data-color="contact number"]').classList.add('none'); */
 }
 
 function showMenuItems() {
   document.querySelector('.messengers').classList.remove('none');
   document.querySelector('.schedule').classList.remove('none');
-  /*  document.querySelector('.contant-phone').classList.remove('none'); */
-  /*   document
-    .querySelector('[data-color="contact number"]')
-    .classList.remove('none'); */
 }

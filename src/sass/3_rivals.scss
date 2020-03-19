@@ -7,11 +7,15 @@
 .rivals-title {
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
   color: #333333;
 }
 
 .rivals-h2 {
   font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .rivals-subtitle {
@@ -28,12 +32,11 @@
 
 .rivals-img-1 {
   width: 20%;
-  height: 100px;
+  height: 120px;
   background-image: url('../images/rivals/stage_1.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-
   /*   background-color: #fff; */
 }
 
@@ -59,33 +62,36 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-
   /*   background-color: orangered; */
 }
 .rivals-img-point {
-  width: 80%;
-  height: 30px;
-  /*  background-color: blue; */
-  background-image: url(../images/rivals/points_group.svg);
+  width: 85%;
+  height: 20px;
+  /* background-color: blue; */
+  /*     background-image: url(../images/rivals/points_group.svg);
   background-repeat: repeat-x;
-  background-position: left bottom;
+  background-position: left bottom; */
+  padding-top: 8px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: center;
   position: relative;
 }
 .rivals-car {
+  width: 13%;
+  height: auto;
   position: absolute;
   top: 0;
-  left: -2%;
+  left: -4%;
 }
 
 .move-car-fwd-section-1 {
-  animation: ride1 1s;
+  animation: ride1 0.5s;
   animation-fill-mode: forwards;
   @-webkit-keyframes ride1 {
     0% {
-      left: -2%;
+      left: -4%;
     }
     100% {
       left: 25%;
@@ -101,7 +107,7 @@
       left: 25%;
     }
     100% {
-      left: 66%;
+      left: 62%;
     }
   }
 }
@@ -110,35 +116,109 @@
   animation-fill-mode: forwards;
   @-webkit-keyframes ride3 {
     0% {
-      left: 66%;
+      left: 62%;
     }
     100% {
-      left: 85%;
+      left: 90%;
     }
   }
 }
 
 .move-car-fwd-section-4 {
-  animation: ride4 1s;
+  animation: ride4 2s;
   animation-fill-mode: forwards;
   @-webkit-keyframes ride4 {
     0% {
-      left: 85%;
+      left: 90%;
     }
     100% {
-      left: -2%;
+      left: -4%;
     }
   }
 }
 
+.move-car-back-section-3 {
+  animation: ride5 1s;
+  animation-fill-mode: forwards;
+  @-webkit-keyframes ride5 {
+    0% {
+      left: 90%;
+    }
+    100% {
+      left: 62%;
+    }
+  }
+}
+
+.move-car-back-section-2 {
+  animation: ride6 1s;
+  animation-fill-mode: forwards;
+  @-webkit-keyframes ride6 {
+    0% {
+      left: 62%;
+    }
+    100% {
+      left: 25%;
+    }
+  }
+}
+.move-car-back-section-1 {
+  animation: ride7 1s;
+  animation-fill-mode: forwards;
+  @-webkit-keyframes ride7 {
+    0% {
+      left: 25%;
+    }
+    100% {
+      left: -4%;
+    }
+  }
+}
+.move-car-back-section-0 {
+  animation: ride8 2s;
+  animation-fill-mode: forwards;
+  @-webkit-keyframes ride8 {
+    0% {
+      left: -4%;
+    }
+    100% {
+      left: 90%;
+    }
+  }
+}
+
+.grey-point-start {
+  fill: #bebebe;
+  animation: fiilgrey 5s;
+  animation-fill-mode: forwards;
+  @-webkit-keyframes fiilgrey {
+    0% {
+      fill: #bebebe;
+    }
+    100% {
+      fill: #bebebe;
+    }
+  }
+}
+.red-point {
+  fill: red;
+  transition: fill 2s;
+}
+
+.grey-point {
+  fill: #bebebe;
+  transition: fill 1s;
+}
 .way-point-1 {
   width: 27%;
   height: 30px;
+
   /* background-color: green; */
 }
 .way-point-2 {
   width: 40%;
   height: 30px;
+
   /* background-color: rgb(230, 214, 0); */
 }
 .way-point-3 {
@@ -149,7 +229,7 @@
 
 .rivals-bottom {
   width: 100%;
-  height: 55%;
+  height: 51%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -192,14 +272,51 @@
   height: 140px;
   border-radius: 50% 50% 0 0 / 100% 100% 0 0;
   background-color: #c6c6c6;
+  position: relative;
+}
+
+.rivals-case-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rivals-case-svg {
+  width: 80px;
+  height: auto;
+  fill: white;
 }
 .rivals-circle-bottom {
   width: 100%;
   height: 140px;
   border-radius: 0 0 50% 50% / 0 0 100% 100%;
   background-color: #ffffff;
+  position: relative;
 }
 
+.rivals-circle-bottom-btn {
+  width: 150px;
+  height: 34px;
+  background-color: #ef0006;
+  border: none;
+  outline: none;
+  border-radius: 35px;
+  box-shadow: 0px 0px 20px rgba(239, 0, 6, 0.5);
+  cursor: pointer;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rivals-circle-bottom-btn:hover {
+  transition-duration: 2s;
+  background-color: rgb(195, 1, 1);
+}
 .rivals-circle-nav {
   display: flex;
   flex-direction: row;
@@ -207,14 +324,14 @@
   justify-content: center;
   align-items: flex-end;
   width: 100%;
-  height: 90%;
+  height: 99%;
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
 .rivals-nav-li {
-  width: 25px;
+  width: 20px;
   height: 20px;
 }
 .nav-rivals-li {

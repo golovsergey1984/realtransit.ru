@@ -79,9 +79,11 @@ function changeCircleScale(e) {
       } else {
         hideMenuItems();
       }
+      i = a;
 
-      currentPageInner(a);
-      onChangeScaleCircle(a);
+      currentPageInner(i);
+      onChangeScaleCircle(i);
+      getColor(i);
     }
   }
 }
