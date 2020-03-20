@@ -125,7 +125,7 @@
 }
 
 .move-car-fwd-section-4 {
-  animation: ride4 2s;
+  animation: ride4 1s;
   animation-fill-mode: forwards;
   @-webkit-keyframes ride4 {
     0% {
@@ -175,7 +175,7 @@
   }
 }
 .move-car-back-section-0 {
-  animation: ride8 2s;
+  animation: ride8 1s;
   animation-fill-mode: forwards;
   @-webkit-keyframes ride8 {
     0% {
@@ -187,27 +187,20 @@
   }
 }
 
-.grey-point-start {
-  fill: #bebebe;
-  animation: fiilgrey 5s;
-  animation-fill-mode: forwards;
-  @-webkit-keyframes fiilgrey {
-    0% {
-      fill: #bebebe;
-    }
-    100% {
-      fill: #bebebe;
-    }
-  }
+.chek-point-color {
+  width: 100%;
+  height: 2px;
+  margin-top: 13px;
 }
+
 .red-point {
-  fill: red;
-  transition: fill 2s;
+  background-color: red;
+  transition: background-color 3s ease;
 }
 
 .grey-point {
-  fill: #bebebe;
-  transition: fill 1s;
+  background-color: #bebebe;
+  transition: background-color 3s ease;
 }
 .way-point-1 {
   width: 27%;
@@ -285,14 +278,41 @@
 .rivals-case-svg {
   width: 80px;
   height: auto;
-  fill: white;
+  opacity: 1; /*Элемент полностью прозрачный (невидимый)*/
 }
+
+.hide-case {
+  transition: 1s; /*Скорость перехода состояния элемента*/
+  animation: hide-case 1s 1;
+  animation-fill-mode: forwards;
+}
+@keyframes hide-case {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .rivals-circle-bottom {
   width: 100%;
   height: 140px;
   border-radius: 0 0 50% 50% / 0 0 100% 100%;
   background-color: #ffffff;
   position: relative;
+}
+
+.rivals-site-box {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #bebebe;
+  position: absolute;
+  top: 9%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .rivals-circle-bottom-btn {
@@ -345,6 +365,11 @@
 }
 
 .nav-rivals-li:hover {
+  background-color: #ff0000;
+  transform: scale(2);
+}
+
+.nav-li-active {
   background-color: #ff0000;
   transform: scale(2);
 }
@@ -462,4 +487,198 @@
   .arrow-line-left-bottom {
     background: red;
   }
+}
+
+// Модальное окно
+.rivalsModal {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: black;
+  z-index: 1000;
+}
+
+.rivals-modal-container {
+  width: 655px;
+  height: 90%;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    180deg,
+    #f4f4f4 0%,
+    #f6f6f6 13.02%,
+    #f7f7f7 28.65%,
+    #f8f8f8 43.75%,
+    #fafafa 57.81%,
+    #fdfdfd 73.44%,
+    #fdfdfd 86.46%,
+    #ffffff 100%
+  );
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.rivals-modal-grad {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url(../images//rivals/Modal/modal_1/bg_modal_1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+  border-radius: 10px;
+}
+
+.rival-modal-close {
+  width: 31px;
+  height: 31px;
+  border-radius: 100%;
+  border: solid #ef0006 1px;
+  outline: none;
+  position: absolute;
+  top: 2%;
+  left: 92%;
+  cursor: pointer;
+  background-color: white;
+  font-size: 18px;
+  color: #ef0006;
+}
+.rival-modal-close:hover {
+  background-color: #ef0006;
+  border: solid white 1px;
+  color: white;
+}
+
+.rival-modal-content-box {
+  position: absolute;
+  top: 8%;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*  align-items: center; */
+  justify-content: center;
+  /*  background-color: rgb(0, 0, 0); */
+}
+
+.rival-modal-title {
+  width: 98%;
+  line-height: 30px;
+
+  background-color: white;
+}
+
+.rival-h2-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  padding-left: 20px;
+}
+
+.rivals-modal-subtitle {
+  width: 98%;
+  line-height: 60px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 20px;
+}
+
+.rival-maodal-circle-1 {
+  width: 60%;
+  height: 100%;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  margin: auto auto;
+  position: relative;
+}
+
+.rival-maodal-circle-2 {
+  width: 70%;
+  height: 70%;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rival-maodal-circle-3 {
+  width: 70%;
+  height: 70%;
+  border-radius: 100%;
+  background: #ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-svg-box {
+  width: 33.33%;
+  height: 130px;
+}
+
+.modal-svg {
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-svg-txt {
+  width: 33.33%;
+  height: auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.rivals-modal-btn {
+  width: 50%;
+  height: 260px;
+  position: relative;
+}
+
+.modal-btn-result-site {
+  width: 70%;
+  height: 20%;
+  background: #ff6347;
+  box-shadow: 0px 0px 20px #ff6347;
+  border-radius: 35px;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.rivals-modal-img {
+  width: 50%;
+  height: auto;
+  background-image: url('../images/rivals/Modal/modal_1/device.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
