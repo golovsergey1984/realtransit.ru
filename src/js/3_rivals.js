@@ -7,7 +7,7 @@ const rivalPoint = Array.from(nodeRivalPoint);
 const nodeCircleSvg = document.querySelectorAll('.rivals-case-svg');
 const circleSvg = Array.from(nodeCircleSvg);
 
-const nodeRivalModalWindows = document.querySelectorAll('.rivalsModal');
+const nodeRivalModalWindows = document.querySelectorAll('.rivalsModal, hide');
 const rivalModalWindow = Array.from(nodeRivalModalWindows);
 
 const nodeSiteName = document.querySelectorAll(
@@ -15,17 +15,19 @@ const nodeSiteName = document.querySelectorAll(
 );
 const siteName = Array.from(nodeSiteName);
 
-console.log(rivalScaleCircle);
-
+innerImgCase(0);
 var countMove = 0;
 
 rivalScale.onclick = function(event) {
   let target = event.target;
   let count = target.getAttribute('data-name');
-
   const countNumberCircle = Number(count);
   console.log(countNumberCircle);
+  console.log(countMove);
+  rivalScaleCircle[countMove].classList.remove('nav-li-active');
+  rivalScaleCircle[countNumberCircle].classList.add('nav-li-active');
   countMove = countNumberCircle;
+
   rivalCar.className = 'rivals-car move-car-fwd-section-' + countMove;
 };
 
@@ -82,30 +84,70 @@ function rivalInfoMove(e) {
 
 function innerImgCase(e) {
   for (let a = 0; a < circleSvg.length; a++) {
-    circleSvg[a].classList.add('hide-case');
-    siteName[a].classList.add('hide-case');
+    circleSvg[a].classList.add('hide');
+    siteName[a].classList.add('hide');
+    rivalScaleCircle[a].classList.remove('nav-li-active');
   }
-  setTimeout(function() {
-    for (let a = 0; a < circleSvg.length; a++) {
-      circleSvg[a].classList.add('hide');
-      siteName[a].classList.add('hide');
-      rivalScaleCircle[a].classList.remove('nav-li-active');
-    }
-  }, 1000);
-  setTimeout(function() {
-    circleSvg[e].classList.remove('hide', 'hide-case');
-    siteName[e].classList.remove('hide', 'hide-case');
-    rivalScaleCircle[e].classList.add('nav-li-active');
-  }, 1000);
+
+  circleSvg[e].classList.remove('hide');
+  siteName[e].classList.remove('hide');
+  rivalScaleCircle[e].classList.add('nav-li-active');
 }
 
+// Открываем текущее модальное окно
 function rivalModal() {
-  /*  console.log(rivalModalWindow.classList); */
+  if (countMove < 0) {
+    countMove = 3;
+  }
+  if (countMove > 3) {
+    countMove = 0;
+  }
+  console.log(rivalModalWindow);
   rivalModalWindow[countMove].classList.remove('hide');
-  console.log(countMove);
+  scrollOff(countMove);
+}
+// Отключаем скролл body под модальным окном
+function scrollOff(countMove) {
+  rivalModalWindow[countMove].addEventListener('mousewheel', function(e) {
+    e.wheelDeltaY ||
+      (e.originalEvent &&
+        (e.originalEvent.wheelDeltaY || e.originalEvent.wheelDelta)) ||
+      e.wheelDelta ||
+      0;
+    e.stopPropagation();
+    e.preventDefault();
+  });
 }
 
+// Переход на сайт по клику "Смотреть"
+function onSubmitWatchUrl(event) {
+  event.setAttribute('rel', 'noopener noreferrer');
+  let url = event.getAttribute('href');
+  let otherWindow = window.open();
+  otherWindow.opener = null;
+  otherWindow.location = url;
+}
+
+// Закрытие модального окна
 function modalClose() {
   rivalModalWindow[countMove].classList.add('hide');
-  console.log('Модалка - закрыта');
 }
+
+/* function innerImgCase(e) {
+    for (let a = 0; a < circleSvg.length; a++) {
+      circleSvg[a].classList.add('hide-case');
+      siteName[a].classList.add('hide-case');
+    }
+    setTimeout(function() {
+      for (let a = 0; a < circleSvg.length; a++) {
+        circleSvg[a].classList.add('hide');
+        siteName[a].classList.add('hide');
+        rivalScaleCircle[a].classList.remove('nav-li-active');
+      }
+    }, 1000);
+    setTimeout(function() {
+      circleSvg[e].classList.remove('hide', 'hide-case');
+      siteName[e].classList.remove('hide', 'hide-case');
+      rivalScaleCircle[e].classList.add('nav-li-active');
+    }, 1000);
+  } */
