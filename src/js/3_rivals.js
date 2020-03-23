@@ -27,6 +27,7 @@ rivalScale.onclick = function(event) {
   rivalScaleCircle[countMove].classList.remove('nav-li-active');
   rivalScaleCircle[countNumberCircle].classList.add('nav-li-active');
   countMove = countNumberCircle;
+  innerImgCase(countMove);
 
   rivalCar.className = 'rivals-car move-car-fwd-section-' + countMove;
 };
