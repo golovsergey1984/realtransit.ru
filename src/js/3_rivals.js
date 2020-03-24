@@ -24,12 +24,45 @@ rivalScale.onclick = function(event) {
   const countNumberCircle = Number(count);
   console.log(countNumberCircle);
   console.log(countMove);
-  rivalScaleCircle[countMove].classList.remove('nav-li-active');
+  if (countMove < 0 && countNumberCircle == 0) {
+    console.log('Я подключен!');
+    for (let z = 0; z < rivalPoint.length; z++) {
+      rivalPoint[z].classList.remove('red-point');
+      rivalPoint[z].classList.add('grey-point');
+    }
+    innerImgCase(0);
+    console.log('Я уже тут');
+    countMove = countNumberCircle + 4;
+    console.log(countMove);
+    rivalCar.className = 'rivals-car move-car-fwd-section-' + countMove;
+  }
+
+  if (countMove < 0 || countMove > 3) {
+    countMove = countNumberCircle;
+  }
+
+  if (countMove == 0 && countNumberCircle == 3) {
+    for (let z = 0; z < rivalPoint.length; z++) {
+      rivalPoint[z].classList.add('red-point');
+      rivalPoint[z].classList.remove('grey-point');
+    }
+    rivalCar.className = 'rivals-car move-car-back-section-' + countMove;
+    innerImgCase(3);
+    countMove = countMove - 1;
+  } else {
+    rivalScaleCircle[countMove].classList.remove('nav-li-active');
+    rivalScaleCircle[countNumberCircle].classList.add('nav-li-active');
+    countMove = countNumberCircle;
+    innerImgCase(countMove);
+
+    /* rivalCar.className = 'rivals-car move-car-fwd-section-' + countMove; */
+  }
+  /*   rivalScaleCircle[countMove].classList.remove('nav-li-active');
   rivalScaleCircle[countNumberCircle].classList.add('nav-li-active');
   countMove = countNumberCircle;
   innerImgCase(countMove);
 
-  rivalCar.className = 'rivals-car move-car-fwd-section-' + countMove;
+  rivalCar.className = 'rivals-car move-car-fwd-section-' + countMove; */
 };
 
 function rivalInfoMove(e) {
