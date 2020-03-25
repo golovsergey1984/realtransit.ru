@@ -1,5 +1,6 @@
 .mouse-box {
   width: 8.7%;
+  position: relative;
   position: fixed;
   top: 90%;
   left: 0%;
@@ -10,9 +11,8 @@
 .mouse-svg {
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-
+  left: 40%;
+  /*  transform: translateX(-50%); */
   animation: move 2s infinite alternate;
 }
 
