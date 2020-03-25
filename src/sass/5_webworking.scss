@@ -58,6 +58,7 @@
     top: 50%;
     left: 70%;
     transform: translateY(-50%);
+    transition: 2s;
     background-color: red;
     box-shadow: 0px 0px 10px rgba(239, 0, 6, 0.5);
     cursor: pointer;
@@ -69,6 +70,7 @@
     }
     .arrow-line-left-top,
     .arrow-line-left-bottom {
+      transition: 2s;
       background: #ffffff;
       height: 2px;
       left: 0px;
@@ -90,9 +92,11 @@
   }
 }
 .web-working-btn-left:hover {
+  transition: 2s;
   background-color: #fff;
   .arrow-line-left-top,
   .arrow-line-left-bottom {
+    transition: 2s;
     background: red;
   }
 }
@@ -111,6 +115,7 @@
     top: 50%;
     right: 70%;
     transform: translateY(-50%);
+    transition: 2s;
     background-color: red;
     box-shadow: 0px 0px 10px rgba(239, 0, 6, 0.5);
     cursor: pointer;
@@ -123,6 +128,7 @@
     }
     .arrow-line-right-top,
     .arrow-line-right-bottom {
+      transition: 2s;
       background: #ffffff;
       height: 2px;
       left: 0px;
@@ -145,9 +151,11 @@
 }
 
 .web-working-btn-right:hover {
+  transition: 2s;
   background-color: #fff;
   .arrow-line-right-top,
   .arrow-line-right-bottom {
+    transition: 2s;
     background: red;
   }
 }
