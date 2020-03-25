@@ -22,18 +22,24 @@ rivalScale.onclick = function(event) {
   let target = event.target;
   let count = target.getAttribute('data-name');
   const countNumberCircle = Number(count);
-  console.log(countNumberCircle);
-  console.log(countMove);
-  if (countMove < 0 && countNumberCircle == 0) {
+  console.log(countMove); // 3
+  console.log(countNumberCircle); // 4
+
+  if (
+    (countMove == -1 && countNumberCircle == 0) ||
+    (countMove == 4 && countNumberCircle == 3)
+  ) {
+    if (countMove == 4) {
+      countMove = 0;
+    } else {
+      countMove = countNumberCircle + 4;
+    }
     console.log('Я подключен!');
     for (let z = 0; z < rivalPoint.length; z++) {
       rivalPoint[z].classList.remove('red-point');
       rivalPoint[z].classList.add('grey-point');
     }
     innerImgCase(0);
-    console.log('Я уже тут');
-    countMove = countNumberCircle + 4;
-    console.log(countMove);
     rivalCar.className = 'rivals-car move-car-fwd-section-' + countMove;
   }
 

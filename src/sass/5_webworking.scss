@@ -1,0 +1,228 @@
+.web-working-box {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  /*   background-color: yellow; */
+}
+
+.web-working-title-box {
+  width: 90%;
+  text-align: center;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.web-working-h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  color: #333333;
+}
+
+.web-working-txt {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  color: #333333;
+  margin-top: 10px;
+}
+
+.web-working-block-wrapper {
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  top: 12%;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.web-working-arrow-left {
+  width: 10%;
+  height: 100%;
+  position: relative;
+  .web-working-btn-left {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translateY(-50%);
+    background-color: red;
+    box-shadow: 0px 0px 10px rgba(239, 0, 6, 0.5);
+    cursor: pointer;
+    .arrow-line-left {
+      height: 10px;
+      width: 10px;
+      position: absolute;
+      left: 30%;
+    }
+    .arrow-line-left-top,
+    .arrow-line-left-bottom {
+      background: #ffffff;
+      height: 2px;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 15px;
+    }
+    .arrow-line-left-top {
+      top: 0px;
+    }
+    .arrow-line-left-top {
+      transform: rotate(45deg);
+      transform-origin: bottom left;
+    }
+    .arrow-line-left-bottom {
+      transform: rotate(-45deg);
+      transform-origin: top left;
+    }
+  }
+}
+.web-working-btn-left:hover {
+  background-color: #fff;
+  .arrow-line-left-top,
+  .arrow-line-left-bottom {
+    background: red;
+  }
+}
+
+.web-working-arrow-right {
+  width: 10%;
+  height: 100%;
+  position: relative;
+  .web-working-btn-right {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    right: 70%;
+    transform: translateY(-50%);
+    background-color: red;
+    box-shadow: 0px 0px 10px rgba(239, 0, 6, 0.5);
+    cursor: pointer;
+
+    .arrow-line-right {
+      height: 10px;
+      width: 10px;
+      position: absolute;
+      left: 25%;
+    }
+    .arrow-line-right-top,
+    .arrow-line-right-bottom {
+      background: #ffffff;
+      height: 2px;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 15px;
+    }
+    .arrow-line-right-top {
+      top: 0px;
+    }
+    .arrow-line-right-top {
+      transform: rotate(45deg);
+      transform-origin: bottom right;
+    }
+    .arrow-line-right-bottom {
+      transform: rotate(-45deg);
+      transform-origin: top right;
+    }
+  }
+}
+
+.web-working-btn-right:hover {
+  background-color: #fff;
+  .arrow-line-right-top,
+  .arrow-line-right-bottom {
+    background: red;
+  }
+}
+
+.web-working-img-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 30% 30% 30%;
+  grid-template-areas: // даем название каждой ячейке сетки, что б управлять ими потом
+    'slide1 slide2 slide3'
+    'slide4 slide5 slide6'
+    'slide7 slide8 slide9';
+  grid-gap: 10px; // задаем отступы мкжду сеткой
+}
+
+// Устанавливаем положение большой фотографии
+.web-slide-big {
+  grid-column-start: slide1;
+  grid-column-end: slide2;
+  grid-row-start: slide1;
+  grid-row-end: slide4;
+}
+
+.web-slide-box {
+  width: 100%;
+  height: 100%;
+}
+
+.web-working-arrow-right {
+  width: 10%;
+  height: 100%;
+  /*   background-color: blue; */
+}
+
+.web-working-slide-1 {
+  background-image: url('../images/Web_working/slide_1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*  background-position: center; */
+}
+
+.web-working-slide-2 {
+  background-image: url('../images/Web_working/slide_2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*  background-position: center; */
+}
+.web-working-slide-3 {
+  background-image: url('../images/Web_working/slide_3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*  background-position: center; */
+}
+
+.web-working-slide-4 {
+  background-image: url('../images/Web_working/slide_4.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*  background-position: center; */
+}
+
+.web-working-slide-5 {
+  background-image: url('../images/Web_working/slide_5.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.web-working-slide-6 {
+  background-image: url('../images/Web_working/slide_6.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /*  background-position: center; */
+}
