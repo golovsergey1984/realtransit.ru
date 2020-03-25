@@ -95,12 +95,12 @@ fill="#141414" />
  </symbol>
 
 
-   <symbol id="mouse" width="22" height="42" viewBox="0 0 32 52" fill="none" >
+   <symbol id="mouse" viewBox="0 0 32 52" fill="none" >
   <rect  x="1" y="1.00049" width="30" height="50" rx="14" stroke="#141414" stroke-width="3"  />
         <line x1="16" y1="11.0005" x2="16" y2="25.0005" stroke="#141414" stroke-width="3" />
  </symbol>
 
-    
+     <!-- width="22" height="42"  -->
        
   
  </svg>
