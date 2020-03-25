@@ -120,6 +120,7 @@
   overflow: hidden;
   cursor: pointer;
   .plane-svg {
+    fill: #bebebe;
     transition-duration: 0.2s;
   }
   .plane-svg-img {
@@ -148,6 +149,7 @@
   overflow: hidden;
   cursor: pointer;
   .whatsapp-svg {
+    fill: #bebebe;
     transition-duration: 0.2s;
   }
   .whatsapp-svg-img {
@@ -181,6 +183,9 @@
   text-align: left;
   display: none;
   cursor: pointer;
+  fill: transparent;
+  stroke: #141414;
+  stroke-width: 2px;
   .call-svg-box {
     float: left;
     overflow: hidden;
