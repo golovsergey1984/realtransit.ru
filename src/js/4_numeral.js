@@ -17,7 +17,6 @@ function resultsScaleWayForward() {
   NumeralCircleBoxOne[0].style.animationName = '';
   NumeralCircleBoxOne[1].style.animationName = '';
   NumeralCircleBoxOne[2].style.animationName = '';
-  pointImpulse.classList.remove('numeral-point-impulse-color-white');
   pointImpulse.classList.remove('hide');
   wayScaleOne.classList.remove('scale-way-white');
   pointImpulse.style.animationName = 'impulse1';
@@ -75,7 +74,6 @@ function resultsScaleWayBack() {
   pointImpulse.classList.remove('hide');
   wayScaleFour.classList.add('scale-way-white');
   pointImpulse.style.animationName = 'impulse4-4';
-  pointImpulse.classList.add('numeral-point-impulse-color-white');
   NumeralCircleBoxThree[0].style.animationName = '';
   NumeralCircleBoxThree[1].style.animationName = '';
   NumeralCircleBoxThree[2].style.animationName = '';

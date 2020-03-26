@@ -56,7 +56,7 @@
     outline: none;
     position: absolute;
     top: 50%;
-    left: 70%;
+    left: 80%;
     transform: translateY(-50%);
     transition: 2s;
     background-color: red;
@@ -113,7 +113,7 @@
     outline: none;
     position: absolute;
     top: 50%;
-    right: 70%;
+    right: 80%;
     transform: translateY(-50%);
     transition: 2s;
     background-color: red;
@@ -166,26 +166,34 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: 30% 30% 30%;
-  grid-template-rows: 30% 30% 30%;
+  grid-template-columns: 22% 22% 22% 22%;
+  grid-template-rows: 47% 47%;
   grid-template-areas: // даем название каждой ячейке сетки, что б управлять ими потом
-    'slide1 slide2 slide3'
-    'slide4 slide5 slide6'
-    'slide7 slide8 slide9';
+    'slide1 slide2 slide3 slide4 '
+    'slide5 slide6 slide7 slide8';
+
   grid-gap: 10px; // задаем отступы мкжду сеткой
 }
 
 // Устанавливаем положение большой фотографии
-.web-slide-big {
+.web-slide-tall {
   grid-column-start: slide1;
-  grid-column-end: slide2;
+  grid-column-end: slide1;
   grid-row-start: slide1;
-  grid-row-end: slide4;
+  grid-row-end: slide5;
+}
+
+.web-slide-wide {
+  grid-column-start: slide7;
+  grid-column-end: slide8;
+  grid-row-start: slide7;
+  grid-row-end: slide8;
 }
 
 .web-slide-box {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .web-working-arrow-right {
@@ -195,42 +203,223 @@
 }
 
 .web-working-slide-1 {
-  background-image: url('../images/Web_working/slide_1.png');
+  /* background-image: url('../images/Web_working/slide_1.png'); */
+  background-color: pink;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   /*  background-position: center; */
 }
 
 .web-working-slide-2 {
-  background-image: url('../images/Web_working/slide_2.png');
+  /*  background-image: url('../images/Web_working/slide_2.png'); */
+  background-color: rgb(149, 149, 149);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   /*  background-position: center; */
 }
 .web-working-slide-3 {
-  background-image: url('../images/Web_working/slide_3.png');
+  /* background-image: url('../images/Web_working/slide_3.png'); */
+  background-color: rgb(250, 102, 255);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   /*  background-position: center; */
 }
 
 .web-working-slide-4 {
-  background-image: url('../images/Web_working/slide_4.png');
+  /* background-image: url('../images/Web_working/slide_4.png'); */
+  background-color: rgb(172, 173, 255);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   /*  background-position: center; */
 }
 
 .web-working-slide-5 {
-  background-image: url('../images/Web_working/slide_5.png');
+  /* background-image: url('../images/Web_working/slide_5.png'); */
+  background-color: rgb(154, 255, 230);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
 }
 
 .web-working-slide-6 {
-  background-image: url('../images/Web_working/slide_6.png');
+  /*  background-image: url('../images/Web_working/slide_6.png'); */
+  background-color: rgb(227, 255, 104);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   /*  background-position: center; */
+}
+
+.web-slide-box-info {
+  width: 0%;
+  height: 0%;
+  position: relative;
+  position: absolute;
+  top: 0; // 0 90
+  left: 0; //0 90
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  background-color: #ef1841;
+  cursor: pointer;
+}
+
+/* .web-slide-box-ear {
+  position: absolute;
+  top: 0%;
+  left: -12%;
+  width: 15px;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 0 30px 30px 0;
+} */
+
+.web-slide-box-ear {
+  width: 5px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 0 30px 30px 0;
+}
+
+@-webkit-keyframes to-top-in {
+  0% {
+    top: 100%;
+    width: 100%;
+    height: 0%;
+  }
+  100% {
+    top: 0%;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes to-top-out {
+  0% {
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    top: 0;
+    height: 0%;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes to-bottom-in {
+  0% {
+    top: 0%;
+    height: 0%;
+    width: 100%;
+  }
+  100% {
+    top: 0%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes to-bottom-out {
+  0% {
+    top: 0%;
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    top: 100%;
+    height: 0%;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes to-right-in {
+  0% {
+    left: 100%;
+    width: 0%;
+    height: 100%;
+  }
+  100% {
+    left: 0%;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes to-right-out {
+  0% {
+    left: 0%;
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    left: 100%;
+    height: 100%;
+    width: 0%;
+  }
+}
+
+@-webkit-keyframes to-left-in {
+  0% {
+    left: 0%;
+    width: 0%;
+    height: 100%;
+  }
+  100% {
+    left: 0%;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes to-left-out {
+  0% {
+    left: 0%;
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    left: 0%;
+    height: 100%;
+    width: 0%;
+  }
+}
+
+/* .to-top {
+  width: 100%;
+  height: 100%;
+  transition: 2s;
+} */
+
+.web-slide-case-box {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 200px;
+}
+
+.web-working-case-company-txt {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+}
+
+.web-working-case-description-txt {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  margin-top: 10px;
+}
+
+.web-working-case-format-txt {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  color: white;
+  margin-top: 20px;
 }
