@@ -5,8 +5,13 @@
   background-color: white;
   overflow: hidden;
 }
-
 @media (min-width: 650px) {
+  .wrapper {
+    max-width: 767px;
+  }
+}
+
+@media (min-width: 767px) {
   .wrapper {
     max-width: 1200px;
   }

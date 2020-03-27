@@ -68,8 +68,13 @@
   background-color: #ff0000;
   transform: scale(2);
 }
-
 @media (min-width: 650px) {
+  .scale-box {
+    visibility: visible;
+  }
+}
+
+@media (min-width: 767px) {
   .scale-box {
     visibility: visible;
   }

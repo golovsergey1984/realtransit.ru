@@ -21,7 +21,7 @@
 
 .box-phone-text {
   max-width: 400px;
-  text-align: center;
+  text-align: left;
 }
 
 .input-phone {
@@ -91,8 +91,9 @@ input:focus::-webkit-input-placeholder {
   line-height: normal;
   text-align: left;
 }
-
 @media (min-width: 650px) {
+}
+@media (min-width: 767px) {
   .devices-img {
     width: 390px;
     height: 300px;

@@ -72,6 +72,11 @@
     visibility: visible;
   }
 }
+@media (min-width: 767px) {
+  .lang-box {
+    visibility: visible;
+  }
+}
 
 @media (min-width: 1200px) {
   .lang-box {

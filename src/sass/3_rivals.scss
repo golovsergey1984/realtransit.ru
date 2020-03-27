@@ -1,6 +1,7 @@
 .Rivals-box {
   width: 100%;
   height: 100vh;
+  position: relative;
   /*  background-color: yellow; */
 }
 
@@ -10,10 +11,12 @@
   font-style: normal;
   font-weight: 400;
   color: #333333;
+  padding-top: 22%;
+  padding-bottom: 0%;
 }
 
 .rivals-h2 {
-  font-size: 30px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
 }
@@ -183,6 +186,62 @@
     }
     100% {
       left: 90%;
+    }
+  }
+}
+
+// движение машинки по шкале через points
+// c 1го на 3й
+.move-car-fwd-section-5 {
+  animation: ride9 1s;
+  animation-fill-mode: forwards;
+  @-webkit-keyframes ride9 {
+    0% {
+      left: -4%;
+    }
+    100% {
+      left: 62%;
+    }
+  }
+}
+// c 2го на 4й
+.move-car-fwd-section-6 {
+  animation: ride10 1s;
+  animation-fill-mode: forwards;
+  @-webkit-keyframes ride10 {
+    0% {
+      left: 25%;
+    }
+    100% {
+      left: 90%;
+    }
+  }
+}
+
+// c 4й на 2ю
+.move-car-fwd-section-7 {
+  animation: ride11 1s;
+  animation-fill-mode: forwards;
+  @-webkit-keyframes ride11 {
+    0% {
+      left: 90%;
+    }
+    100% {
+      left: 25%;
+    }
+  }
+}
+
+// c 3й на 1ю
+.move-car-fwd-section-8 {
+  animation: ride12 1s;
+  animation-fill-mode: forwards;
+  @-webkit-keyframes ride12 {
+    0% {
+      left: 62%;
+    }
+    100% {
+      left: -4%;
     }
   }
 }
@@ -733,4 +792,30 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+@media (min-width: 650px) {
+  .rivals-title {
+    padding-top: 6%;
+    padding-bottom: 0%;
+  }
+}
+
+@media (min-width: 767px) {
+  .rivals-title {
+    padding-top: 0;
+    padding-bottom: 0%;
+  }
+  .rivals-h2 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .rivals-title {
+    padding-top: 0;
+    padding-bottom: 0%;
+  }
+  .rivals-h2 {
+    font-size: 30px;
+  }
 }

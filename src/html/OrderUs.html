@@ -3,59 +3,5 @@
     <div class="ellipse">
         <a name="order us"></a>
     </div>
-    <div id="content"></div>
-
-    Сторона введения: <span id="result"></span>
-
-    <style>
-        #content {
-            width: 100px;
-            height: 100px;
-            background: black;
-        }
-    </style>
 
 </div>
-<script>
-
-    document.querySelector("#content").onmouseenter = function (mouse) {
-        var edge = closestEdge(mouse, this);
-        document.getElementById('result').innerHTML = edge;
-    }
-
-    function closestEdge(mouse, elem) {
-        console.log(mouse)
-
-        var elemBounding = elem.getBoundingClientRect();
-        console.log(elemBounding)
-        var elementLeftEdge = elemBounding.left;
-        var elementTopEdge = elemBounding.top;
-        var elementRightEdge = elemBounding.right;
-        var elementBottomEdge = elemBounding.bottom;
-        console.log(elementTopEdge)
-
-        var mouseX = mouse.clientX;
-        var mouseY = mouse.clientY;
-
-        var topEdgeDist = Math.abs(elementTopEdge - mouseY);
-        var bottomEdgeDist = Math.abs(elementBottomEdge - mouseY);
-        var leftEdgeDist = Math.abs(elementLeftEdge - mouseX);
-        var rightEdgeDist = Math.abs(elementRightEdge - mouseX);
-
-        var min = Math.min(topEdgeDist, bottomEdgeDist, leftEdgeDist, rightEdgeDist);
-        console.log(topEdgeDist)
-        console.log(bottomEdgeDist)
-        console.log(leftEdgeDist)
-        console.log(rightEdgeDist)
-        switch (min) {
-
-            case leftEdgeDist: return "Лево";
-            case rightEdgeDist: return "Право";
-            case topEdgeDist: return "Верх";
-            case bottomEdgeDist: return "Низ";
-
-        }
-
-    }
-
-</script>

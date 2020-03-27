@@ -28,8 +28,13 @@
     bottom: 0;
   }
 }
-
 @media (min-width: 650px) {
+  .mouse-box {
+    display: block;
+  }
+}
+
+@media (min-width: 767px) {
   .mouse-box {
     display: block;
   }

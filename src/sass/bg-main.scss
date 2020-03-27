@@ -66,14 +66,25 @@
     rgba(246, 246, 246, 1) 100%
   );
 }
-
 @media (min-width: 650px) {
   .bgimage {
     width: 91.3%;
     float: right;
   }
   .ellipse {
-    height: 22.628%;
+    height: 14%;
+
+    border-radius: 0 0 100% 100%;
+  }
+}
+
+@media (min-width: 767px) {
+  .bgimage {
+    width: 91.3%;
+    float: right;
+  }
+  .ellipse {
+    height: 18%;
     background-color: black;
     border-radius: 0 0 100% 100%;
   }

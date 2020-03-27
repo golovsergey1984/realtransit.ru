@@ -131,6 +131,25 @@
   }
 }
 
+@media (min-width: 767px) {
+  .burger-btn {
+    height: 50px;
+    border: none;
+    background: transparent;
+    margin-left: 0px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .burger-text {
+    visibility: visible;
+  }
+  .dropdown-content {
+    width: 400px;
+    left: 100%;
+    opacity: 0.9;
+  }
+}
+
 @media (min-width: 1200px) {
   .burger-btn {
     height: 50px;

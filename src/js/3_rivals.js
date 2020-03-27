@@ -22,19 +22,96 @@ rivalScale.onclick = function(event) {
   let target = event.target;
   let count = target.getAttribute('data-name');
   const countNumberCircle = Number(count);
-  console.log(countMove); // 3
-  console.log(countNumberCircle); // 4
 
   if (
+    countMove - 1 == countNumberCircle ||
+    (countMove == -1 && countNumberCircle == 2)
+  ) {
+    if (countMove == -1) {
+      countMove = 3;
+    }
+    rivalCar.className = 'rivals-car move-car-back-section-' + countMove;
+    countMove = countNumberCircle;
+    rivalPoint[countMove].classList.add('grey-point');
+    rivalPoint[countMove].classList.remove('red-point');
+    innerImgCase(countMove);
+  }
+  if (
+    countMove + 1 == countNumberCircle ||
+    (countMove == 4 && countNumberCircle == 1)
+  ) {
+    // ВПЕРЕД: машинка едет по шкале на 1н шаг вперед
+    if (countMove == 4) {
+      countMove = 0;
+    }
+    rivalPoint[countMove].classList.remove('grey-point');
+    rivalPoint[countMove].classList.add('red-point');
+    countMove = countNumberCircle;
+    rivalCar.className = 'rivals-car move-car-fwd-section-' + countMove;
+    innerImgCase(countMove);
+  }
+
+  // НАЗАД: машинка едет с 4й секции на 2ю
+  if (
+    (countMove == 3 && countNumberCircle == 1) ||
+    (countMove == -1 && countNumberCircle == 1)
+  ) {
+    for (let z = 1; z < rivalPoint.length; z++) {
+      rivalPoint[z].classList.remove('red-point');
+      rivalPoint[z].classList.add('grey-point');
+    }
+    rivalCar.className = 'rivals-car move-car-fwd-section-' + 7;
+    countMove = countNumberCircle;
+    innerImgCase(countMove);
+  }
+  // НАЗАД: машинка едет с 3й секции на 1ю
+  if (countMove == 2 && countNumberCircle == 0) {
+    for (let z = 0; z < rivalPoint.length - 1; z++) {
+      rivalPoint[z].classList.remove('red-point');
+      rivalPoint[z].classList.add('grey-point');
+    }
+    rivalCar.className = 'rivals-car move-car-fwd-section-' + 8;
+    countMove = countNumberCircle;
+    innerImgCase(countMove);
+  }
+
+  // ВПЕРЕД: машинка едет с 1й секции на 3ю
+  if (
+    (countMove == 0 && countNumberCircle == 2) ||
+    (countMove == 4 && countNumberCircle == 2)
+  ) {
+    for (let z = 0; z < rivalPoint.length - 1; z++) {
+      rivalPoint[z].classList.add('red-point');
+      rivalPoint[z].classList.remove('grey-point');
+    }
+
+    rivalCar.className = 'rivals-car move-car-fwd-section-' + 5;
+    countMove = countNumberCircle;
+    innerImgCase(countMove);
+  }
+  // ВПЕРЕД: машинка едет с 2й секции на 4ю
+  if (countMove == 1 && countNumberCircle == 3) {
+    for (let z = 1; z < rivalPoint.length; z++) {
+      rivalPoint[z].classList.add('red-point');
+      rivalPoint[z].classList.remove('grey-point');
+    }
+
+    rivalCar.className = 'rivals-car move-car-fwd-section-' + 6;
+    countMove = countNumberCircle;
+    innerImgCase(countMove);
+  }
+  // НАЗАД: машинка едет с 4й секции на 1ю
+  if (
     (countMove == -1 && countNumberCircle == 0) ||
-    (countMove == 4 && countNumberCircle == 3)
+    (countMove == 4 && countNumberCircle == 3) ||
+    (countMove == 3 && countNumberCircle == 0)
   ) {
     if (countMove == 4) {
       countMove = 0;
     } else {
       countMove = countNumberCircle + 4;
     }
-    console.log('Я подключен!');
+
     for (let z = 0; z < rivalPoint.length; z++) {
       rivalPoint[z].classList.remove('red-point');
       rivalPoint[z].classList.add('grey-point');
@@ -47,6 +124,7 @@ rivalScale.onclick = function(event) {
     countMove = countNumberCircle;
   }
 
+  // ВПЕРЕД: машинка едет с 1й секции на 4ю
   if (countMove == 0 && countNumberCircle == 3) {
     for (let z = 0; z < rivalPoint.length; z++) {
       rivalPoint[z].classList.add('red-point');
@@ -55,20 +133,7 @@ rivalScale.onclick = function(event) {
     rivalCar.className = 'rivals-car move-car-back-section-' + countMove;
     innerImgCase(3);
     countMove = countMove - 1;
-  } else {
-    rivalScaleCircle[countMove].classList.remove('nav-li-active');
-    rivalScaleCircle[countNumberCircle].classList.add('nav-li-active');
-    countMove = countNumberCircle;
-    innerImgCase(countMove);
-
-    /* rivalCar.className = 'rivals-car move-car-fwd-section-' + countMove; */
   }
-  /*   rivalScaleCircle[countMove].classList.remove('nav-li-active');
-  rivalScaleCircle[countNumberCircle].classList.add('nav-li-active');
-  countMove = countNumberCircle;
-  innerImgCase(countMove);
-
-  rivalCar.className = 'rivals-car move-car-fwd-section-' + countMove; */
 };
 
 function rivalInfoMove(e) {
@@ -142,7 +207,6 @@ function rivalModal() {
   if (countMove > 3) {
     countMove = 0;
   }
-  console.log(rivalModalWindow);
   rivalModalWindow[countMove].classList.remove('hide');
   scrollOff(countMove);
 }

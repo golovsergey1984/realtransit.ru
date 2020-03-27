@@ -53,11 +53,19 @@
 @media (min-width: 650px) {
   .socials-box {
     visibility: visible;
+    left: 75%;
+  }
+}
+@media (min-width: 767px) {
+  .socials-box {
+    visibility: visible;
+    left: 80%;
   }
 }
 
 @media (min-width: 1200px) {
   .socials-box {
     visibility: visible;
+    left: 85%;
   }
 }
