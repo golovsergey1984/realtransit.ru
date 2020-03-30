@@ -22,6 +22,25 @@ rivalScale.onclick = function(event) {
   let target = event.target;
   let count = target.getAttribute('data-name');
   const countNumberCircle = Number(count);
+  // НАЗАД: машинка едет с 4й секции на 1ю
+  if (
+    (countMove == -1 && countNumberCircle == 0) ||
+    (countMove == 4 && countNumberCircle == 3) ||
+    (countMove == 3 && countNumberCircle == 0)
+  ) {
+    if (countMove == 4) {
+      countMove = 0;
+    } else {
+      countMove = countNumberCircle + 4;
+    }
+
+    for (let z = 0; z < rivalPoint.length; z++) {
+      rivalPoint[z].classList.remove('red-point');
+      rivalPoint[z].classList.add('grey-point');
+    }
+    innerImgCase(0);
+    rivalCar.className = 'rivals-car move-car-fwd-section-' + countMove;
+  }
 
   if (
     countMove - 1 == countNumberCircle ||
@@ -99,25 +118,6 @@ rivalScale.onclick = function(event) {
     rivalCar.className = 'rivals-car move-car-fwd-section-' + 6;
     countMove = countNumberCircle;
     innerImgCase(countMove);
-  }
-  // НАЗАД: машинка едет с 4й секции на 1ю
-  if (
-    (countMove == -1 && countNumberCircle == 0) ||
-    (countMove == 4 && countNumberCircle == 3) ||
-    (countMove == 3 && countNumberCircle == 0)
-  ) {
-    if (countMove == 4) {
-      countMove = 0;
-    } else {
-      countMove = countNumberCircle + 4;
-    }
-
-    for (let z = 0; z < rivalPoint.length; z++) {
-      rivalPoint[z].classList.remove('red-point');
-      rivalPoint[z].classList.add('grey-point');
-    }
-    innerImgCase(0);
-    rivalCar.className = 'rivals-car move-car-fwd-section-' + countMove;
   }
 
   if (countMove < 0 || countMove > 3) {
