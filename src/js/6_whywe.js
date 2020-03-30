@@ -91,7 +91,7 @@ const dbWhyWeModal = [
     whyWeModalParagraphENG2:
       'We make sites with selling triggers and chips that make a potential customer want to buy. Therefore, you quickly recoup your investment in creating a website.',
     whyWeModalCircleNumber: '1',
-    whyweModalIMG: '../images/Why_we/Modal/man_1.png',
+    whyweModalIMG: './images/Why_we/Modal/man_1.png',
     coorectPositionImg: 'whywe-correct-position-1',
   },
   {
@@ -106,7 +106,7 @@ const dbWhyWeModal = [
     whyWeModalParagraphENG2:
       'This allows you to find the optimal traffic that will bring you the greatest profit.In other words, we strive to find a golden mean between reducing your advertising costs as much as possible, while maintaining its high efficiency.',
     whyWeModalCircleNumber: '2',
-    whyweModalIMG: '../images/Why_we/Modal/man_2.png',
+    whyweModalIMG: './images/Why_we/Modal/man_2.png',
     coorectPositionImg: 'whywe-correct-position-2',
   },
   {
@@ -119,7 +119,7 @@ const dbWhyWeModal = [
       'If you order a website from us, you do not spend money, but invest it. This investment will pay off in just a couple of months. It is extremely important for us to make your dite sell. Because if the site makes a profit, it attraсts investments, so, we also gain profits.',
     whyWeModalParagraphENG2: '',
     whyWeModalCircleNumber: '3',
-    whyweModalIMG: '../images/Why_we/Modal/man_3.png',
+    whyweModalIMG: './images/Why_we/Modal/man_3.png',
     coorectPositionImg: 'whywe-correct-position-3',
   },
   {
@@ -134,7 +134,7 @@ const dbWhyWeModal = [
     whyWeModalParagraphENG2:
       'When we create you website, we "do not reinvent the wheel", but rely on the experience and statistics that we get from analysing other projects.',
     whyWeModalCircleNumber: '4',
-    whyweModalIMG: '../images/Why_we/Modal/man_4.png',
+    whyweModalIMG: './images/Why_we/Modal/man_4.png',
     coorectPositionImg: 'whywe-correct-position-4',
   },
   {
@@ -147,7 +147,7 @@ const dbWhyWeModal = [
       'If you order a website from us, you do not have to think about how to purchase a domain, hosting, connect the analytics and statistics of visits, integrate with the CRM system, set up notifications about requests coming from the site, etc.-everything is already included. In addition, you get access to the visual editor of the site and round-the-clock technical support!',
     whyWeModalParagraphENG2: '',
     whyWeModalCircleNumber: '5',
-    whyweModalIMG: '../images/Why_we/Modal/man_5.png',
+    whyweModalIMG: './images/Why_we/Modal/man_5.png',
   },
   {
     whyWeModalTitleRUS: 'Мы помогаем вашему проекту расти после создания',
@@ -159,7 +159,7 @@ const dbWhyWeModal = [
       'We continue to lead your project even after we create it. We constantly monitor its condition, performance, make adjustments on time, connect the analytics and statistics of visits, conduct tests, if necessary, to increase your sales. To improve the quality of the site, we use modern technologies, more about which you can find on our Technologies page.',
     whyWeModalParagraphENG2: '',
     whyWeModalCircleNumber: '6',
-    whyweModalIMG: '../images/Why_we/Modal/man_6.png',
+    whyweModalIMG: './images/Why_we/Modal/man_6.png',
   },
 ];
 

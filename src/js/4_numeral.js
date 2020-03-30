@@ -23,9 +23,9 @@ function resultsScaleWayForward() {
   wayScaleOne.classList.add('scale-way-red');
   setTimeout(function() {
     pointImpulse.classList.add('hide');
-    NumeralCircleBoxOne[0].style.animationName = 'pulse1';
-    NumeralCircleBoxOne[1].style.animationName = 'pulse2';
-    NumeralCircleBoxOne[2].style.animationName = 'pulse3';
+    NumeralCircleBoxOne[0].style.animationName = 'pulse31';
+    NumeralCircleBoxOne[1].style.animationName = 'pulse32';
+    NumeralCircleBoxOne[2].style.animationName = 'pulse33';
     setTimeout(function() {
       wayScaleTwo.classList.remove('scale-way-white');
       pointImpulse.classList.remove('hide');
@@ -37,9 +37,9 @@ function resultsScaleWayForward() {
       NumeralCircleBoxOne[0].style.animationName = '';
       NumeralCircleBoxOne[1].style.animationName = '';
       NumeralCircleBoxOne[2].style.animationName = '';
-      NumeralCircleBoxTwo[0].style.animationName = 'pulse1';
-      NumeralCircleBoxTwo[1].style.animationName = 'pulse2';
-      NumeralCircleBoxTwo[2].style.animationName = 'pulse3';
+      NumeralCircleBoxTwo[0].style.animationName = 'pulse31';
+      NumeralCircleBoxTwo[1].style.animationName = 'pulse32';
+      NumeralCircleBoxTwo[2].style.animationName = 'pulse33';
     }, 4000);
     setTimeout(function() {
       pointImpulse.classList.remove('hide');
@@ -52,9 +52,9 @@ function resultsScaleWayForward() {
       NumeralCircleBoxTwo[0].style.animationName = '';
       NumeralCircleBoxTwo[1].style.animationName = '';
       NumeralCircleBoxTwo[2].style.animationName = '';
-      NumeralCircleBoxThree[0].style.animationName = 'pulse1';
-      NumeralCircleBoxThree[1].style.animationName = 'pulse2';
-      NumeralCircleBoxThree[2].style.animationName = 'pulse3';
+      NumeralCircleBoxThree[0].style.animationName = 'pulse31';
+      NumeralCircleBoxThree[1].style.animationName = 'pulse32';
+      NumeralCircleBoxThree[2].style.animationName = 'pulse33';
     }, 8000);
     setTimeout(function() {
       pointImpulse.classList.remove('hide');
@@ -79,9 +79,9 @@ function resultsScaleWayBack() {
   NumeralCircleBoxThree[2].style.animationName = '';
   setTimeout(function() {
     pointImpulse.classList.add('hide');
-    NumeralCircleBoxThree[0].style.animationName = 'pulse1';
-    NumeralCircleBoxThree[1].style.animationName = 'pulse2';
-    NumeralCircleBoxThree[2].style.animationName = 'pulse3';
+    NumeralCircleBoxThree[0].style.animationName = 'pulse31';
+    NumeralCircleBoxThree[1].style.animationName = 'pulse32';
+    NumeralCircleBoxThree[2].style.animationName = 'pulse33';
     setTimeout(function() {
       wayScaleThree.classList.remove('scale-way-red');
       pointImpulse.classList.remove('hide');
@@ -93,9 +93,9 @@ function resultsScaleWayBack() {
       NumeralCircleBoxThree[0].style.animationName = '';
       NumeralCircleBoxThree[1].style.animationName = '';
       NumeralCircleBoxThree[2].style.animationName = '';
-      NumeralCircleBoxTwo[0].style.animationName = 'pulse1';
-      NumeralCircleBoxTwo[1].style.animationName = 'pulse2';
-      NumeralCircleBoxTwo[2].style.animationName = 'pulse3';
+      NumeralCircleBoxTwo[0].style.animationName = 'pulse31';
+      NumeralCircleBoxTwo[1].style.animationName = 'pulse32';
+      NumeralCircleBoxTwo[2].style.animationName = 'pulse33';
     }, 4000);
     setTimeout(function() {
       wayScaleTwo.classList.remove('scale-way-red');
@@ -108,9 +108,9 @@ function resultsScaleWayBack() {
       NumeralCircleBoxTwo[0].style.animationName = '';
       NumeralCircleBoxTwo[1].style.animationName = '';
       NumeralCircleBoxTwo[2].style.animationName = '';
-      NumeralCircleBoxOne[0].style.animationName = 'pulse1';
-      NumeralCircleBoxOne[1].style.animationName = 'pulse2';
-      NumeralCircleBoxOne[2].style.animationName = 'pulse3';
+      NumeralCircleBoxOne[0].style.animationName = 'pulse31';
+      NumeralCircleBoxOne[1].style.animationName = 'pulse32';
+      NumeralCircleBoxOne[2].style.animationName = 'pulse33';
     }, 8000);
     setTimeout(function() {
       wayScaleOne.classList.remove('scale-way-red');
