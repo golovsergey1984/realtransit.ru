@@ -13,11 +13,59 @@
         <div class="orderus-content-wrapper">
             <div class="orderus-button-wrapper">
                 <script id="orderus-button-wrapper" type="text/x-handlebars-template">
-                <button class="orderus-button-case-price" data-leng="rus">{{orderUsBtnTitleRUS}}</button>
-                <button class="orderus-button-case-price hide" data-leng="eng">{{orderUsBtnTitleENG}}</button>
-</script>
+                    {{#each buttons}}
+                <button class="orderus-button-case-price" data-leng="rus" data-name="{{orderUsCaseDataName}}" onclick="orderUsCasePriceClick(this)">  
+                        <svg class="orderus-button-case-svg">
+                                <use xlink:href="images/sprite.svg#{{orderUsBtnSVG}}"></use>
+                            </svg>
+                            {{orderUsBtnTitleRUS}}
+                </button>
+                <button class="orderus-button-case-price hide" data-leng="eng" data-name="{{orderUsCaseDataName}}" onclick="orderUsCasePriceClick(this)">  
+                        <svg class="orderus-button-case-svg">
+                                <use xlink:href="images/sprite.svg#{{orderUsBtnSVG}}"></use>
+                            </svg>
+                            {{orderUsBtnTitleENG}}
+                </button>
+                {{/each}}
+               
+                    
+                <div class="orderus-qoute-box">
+                    <div class="orderus-qoute-img"></div>
+                    <div class="orderus-qoute-text">
+                        <p class="normolize-pm orderus-qoute"  data-leng="rus">{{orderUsBtnQouteRUS}}</p>
+                        <p class="normolize-pm"  data-leng="rus">{{orderUsBtnAutherRUS}}</p>
+                        <p class="normolize-pm orderus-qoute hide" data-leng="eng">{{orderUsBtnQouteENG}}</p>
+                        <p class="normolize-pm hide" data-leng="eng">{{orderUsBtnAutherENG}}</p>
+                    </div>
+ 
+
+                </div>
+            </script>
             </div>
-            <div class="orderus-case-wrapper"></div>
+            <div class="orderus-case-wrapper">
+                <script id="orderus-case-wrapper" type="text/x-handlebars-template">
+                    {{#each cases}}
+                <div class="orderus-item-card-box" >
+                    <div class="orderus-item-card-img"
+                        style="background-image: url('{{orderUsCaseImg}}')"></div>
+                    <div class="orderus-item-card-title" data-leng="rus">{{orderUsBtnCaseTitleRUS}}</div>
+                    <div class="orderus-item-card-title hide" data-leng="eng">{{orderUsBtnCaseTitleENG}}</div>
+                    <ul class="orderus-item-table-desc">
+                        {{#each orderusTabelDataRUS}}
+                        <li data-leng="rus">{{this}}</li>
+                        {{/each}}
+                        {{#each orderusTabelDataENG}}
+                        <li class="hide" data-leng="eng">{{this}}</li>
+                        {{/each}}
+                    </ul>
+                    <div class="orderus-item-card-price" data-leng="rus">{{orderUsBtnCasePriceRUS}}</div>
+                    <div class="orderus-item-card-price hide" data-leng="eng">{{orderUsBtnCasePriceENG}}</div>
+                    <button class="orderus-item-card-price-button" data-leng="rus">{{orderUsBtnCaseBtnTxtRUS}}</button>
+                    <button class="orderus-item-card-price-button hide" data-leng="eng">{{orderUsBtnCaseBtnTxtENG}}</button>
+                </div>
+                {{/each}}
+            </script>
+            </div>
         </div>
     </div>
 </div>

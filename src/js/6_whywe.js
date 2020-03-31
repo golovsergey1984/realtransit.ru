@@ -229,6 +229,7 @@ function whyweScrollOff() {
 const nodeCurrentReasonOnClick = document.querySelectorAll('.why-we-wrapper');
 const currentReasonOnClick = Array.from(nodeCurrentReasonOnClick);
 var wyweDataNameCurrentEvent = null;
+
 for (const whyWecurrentModal of currentReasonOnClick) {
   whyWecurrentModal.addEventListener('click', function(event) {
     wyweDataNameCurrentEvent = whyWecurrentModal.getAttribute('data-name');
