@@ -44,7 +44,7 @@ const dbOrderUsOnePage = [
   {
     cases: [
       {
-        orderUsCaseImg: '../images/Order_us/Landing_page/man_1.png',
+        orderUsCaseImg: 'images/Order_us/Landing_page/man_1.png',
         orderUsBtnCaseTitleRUS: 'Лендинг VIP',
         orderUsBtnCaseTitleENG: 'Landing VIP',
         orderusTabelDataRUS: [
@@ -67,7 +67,7 @@ const dbOrderUsOnePage = [
         orderUsBtnCaseBtnTxtENG: 'Leave a request',
       },
       {
-        orderUsCaseImg: '../images/Order_us/Landing_page/man_2.png',
+        orderUsCaseImg: 'images/Order_us/Landing_page/man_2.png',
         orderUsBtnCaseTitleRUS: 'Лендинг Бизнес',
         orderUsBtnCaseTitleENG: 'Landing business',
         orderusTabelDataRUS: [
@@ -89,7 +89,7 @@ const dbOrderUsOnePage = [
         orderUsBtnCaseBtnTxtENG: 'Leave a request',
       },
       {
-        orderUsCaseImg: '../images/Order_us/Landing_page/man_3.png',
+        orderUsCaseImg: 'images/Order_us/Landing_page/man_3.png',
         orderUsBtnCaseTitleRUS: 'Лендинг Экспресс',
         orderUsBtnCaseTitleENG: 'Landing Express',
         orderusTabelDataRUS: [
@@ -115,7 +115,7 @@ const dbOrderUsMultiPage = [
   {
     cases: [
       {
-        orderUsCaseImg: '../images/Order_us/Landing_page/man_1.png',
+        orderUsCaseImg: 'images/Order_us/Landing_page/man_1.png',
         orderUsBtnCaseTitleRUS: 'Сайт Визитка',
         orderUsBtnCaseTitleENG: 'Business card site',
         orderusTabelDataRUS: [
@@ -132,13 +132,13 @@ const dbOrderUsMultiPage = [
           'Mobile version',
           'Development period is 15 days',
         ],
-        orderUsBtnCasePriceRUS: '790 руб.',
-        orderUsBtnCasePriceENG: '790 rub.',
+        orderUsBtnCasePriceRUS: 'от 790 руб.',
+        orderUsBtnCasePriceENG: 'from 790 rub.',
         orderUsBtnCaseBtnTxtRUS: 'оставить заявку',
         orderUsBtnCaseBtnTxtENG: 'Leave a request',
       },
       {
-        orderUsCaseImg: '../images/Order_us/Landing_page/man_2.png',
+        orderUsCaseImg: 'images/Order_us/Landing_page/man_2.png',
         orderUsBtnCaseTitleRUS: 'Корпоративный сайт',
         orderUsBtnCaseTitleENG: 'Corporate website',
         orderusTabelDataRUS: [
@@ -154,13 +154,13 @@ const dbOrderUsMultiPage = [
           'Development period is 10 days',
         ],
 
-        orderUsBtnCasePriceRUS: '1490 руб.',
-        orderUsBtnCasePriceENG: '1490 rub.',
+        orderUsBtnCasePriceRUS: 'от 1490 руб.',
+        orderUsBtnCasePriceENG: 'from 1490 rub.',
         orderUsBtnCaseBtnTxtRUS: 'оставить заявку',
         orderUsBtnCaseBtnTxtENG: 'Leave a request',
       },
       {
-        orderUsCaseImg: '../images/Order_us/Landing_page/man_3.png',
+        orderUsCaseImg: 'images/Order_us/Landing_page/man_3.png',
         orderUsBtnCaseTitleRUS: 'Интернет портал',
         orderUsBtnCaseTitleENG: 'Internet portal',
         orderusTabelDataRUS: [
@@ -173,8 +173,8 @@ const dbOrderUsMultiPage = [
           'Domain + hosting for 1 year',
           'Development period is 5 days',
         ],
-        orderUsBtnCasePriceRUS: '1990 руб.',
-        orderUsBtnCasePriceENG: '1990 rub.',
+        orderUsBtnCasePriceRUS: 'от 1990 руб.',
+        orderUsBtnCasePriceENG: 'from 1990 rub.',
         orderUsBtnCaseBtnTxtRUS: 'оставить заявку',
         orderUsBtnCaseBtnTxtENG: 'Leave a request',
       },
