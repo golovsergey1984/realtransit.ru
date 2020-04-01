@@ -343,7 +343,7 @@ const dbOrderUsSEO = [
   {
     cases: [
       {
-        orderUsCaseImg: '../images/Order_us/SEO_prom/man_1.png',
+        orderUsCaseImg: 'images/Order_us/SEO_prom/man_1.png',
         orderUsCaseImgAdvRUS: 'images/Order_us/adv.png',
         orderUsCaseImgAdvENG: '',
         orderUsBtnCaseTitleRUS: 'По позициям',

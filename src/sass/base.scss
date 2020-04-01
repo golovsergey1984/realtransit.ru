@@ -3,13 +3,14 @@ html {
 
   scroll-behavior: smooth;
   background-color: white;
-  -moz-scrollbars-vertical: hidden;
 }
 
 ::-webkit-scrollbar {
   /* chrome based */
   width: 0px; /* ширина scrollbar'a */
-  overflow: hidden;
+  /*   overflow: scroll; */
+  /*  overflow: hidden; */
+
   /*  background: transparent;  */ /* опционально */
 }
 
