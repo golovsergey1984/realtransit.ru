@@ -1,0 +1,43 @@
+<!-- 9й слайд из 12 -->
+
+<div class="bgimage bg-Grey" data-bgc="bright">
+    <a name="buisness packing"></a>
+    <div class="ellipse"></div>
+    <div class="bpacking-box">
+        <script id="bpacking-main-wrapper" type="text/x-handlebars-template">
+        <div class="bpacking-title-box">
+            <h2 class="normolize-pm bpacking-h2" data-leng="rus">{{bpackingMainTitleRUS}}</h2>
+            <h2 class="normolize-pm bpacking-h2 hide" data-leng="eng">{{bpackingMainTitleENG}}</h2>
+        </div>
+
+
+        <div class="bpacking-content-wrapper">
+            <div class="bpacking-box-img" style="background-image: url('images/Business_pack/box_1.png')">
+            </div>
+
+            {{#each bpackingbuttonsBox}}
+            <button type="button" class="bpacking-box-btn {{bPackingBtnBoxPosition}} "
+            href="{{bPackingBtnBoxURL}}" onclick="bPackingBtnBoxClick(this)" data-leng="rus" data-txt="{{bPackingBtnDetailTxtRUS}}">{{bPackingBtnBoxRUS}}</button>
+            <button type="button" class="bpacking-box-btn {{bPackingBtnBoxPosition}} hide"
+            href="{{bPackingBtnBoxURL}}"  onclick="bPackingBtnBoxClick(this)" data-leng="eng" data-txt="{{bPackingBtnDetailTxtENG}}">{{bPackingBtnBoxENG}}</button>
+            {{/each}}
+
+        </div>
+        
+        <div class="bpacking-box-details">
+                {{#each bpackingbuttonsDetail}}
+                <div class="bpacking-box-details-txt-container">
+                    <p class="normolize-pm bpacking-box-details-txt" data-leng="rus"></p>
+                    <p class="normolize-pm bpacking-box-details-txt hide" data-leng="eng"></p>
+                    </div>
+                <button type="button" class="bpacking-detail-btn" data-leng="rus">{{bPackingBtnDetailRUS}}</button>
+                <button type="button" class="bpacking-detail-btn hide"
+                    data-leng="eng">{{bPackingBtnDetailENG}}</button>
+                    {{/each}}
+            </div>
+           
+        </script>
+
+
+    </div>
+</div>

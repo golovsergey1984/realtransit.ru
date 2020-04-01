@@ -4,7 +4,7 @@
     <div class="ellipse"></div>
     <div class="orderus-box">
         <div class="orderus-title-box">
-            <h2 class="normolize-pm orderus-h2" data-leng="rus">Заказывая сайт у нас, Вы не тратите денеги, а
+            <h2 class="normolize-pm orderus-h2" data-leng="rus">Заказывая сайт у нас, Вы не тратите деньги, а
                 инвестируете их</h2>
             <h2 class="normolize-pm orderus-h2 hide" data-leng="eng">If you order a website from us, you do not spend
                 money, you invest them!</h2>
@@ -47,8 +47,11 @@
                     {{#each cases}}
                 <div class="orderus-item-card-box" >
                     <div class="orderus-item-card-img"
-                        style="background-image: url('{{orderUsCaseImg}}')"></div>
-                    <div class="orderus-item-card-title" data-leng="rus">{{orderUsBtnCaseTitleRUS}}</div>
+                        style="background-image: url('{{orderUsCaseImg}}')">
+                     </div>
+                     <div  class="orderus-item-card-img-adv" data-leng="rus" style="background-image: url('{{orderUsCaseImgAdvRUS}}')"></div>
+                     <div  class="orderus-item-card-img-adv hide" data-leng="eng" style="background-image: url('{{orderUsCaseImgAdvENG}}')"></div>
+                     <div class="orderus-item-card-title" data-leng="rus">{{orderUsBtnCaseTitleRUS}}</div>
                     <div class="orderus-item-card-title hide" data-leng="eng">{{orderUsBtnCaseTitleENG}}</div>
                     <ul class="orderus-item-table-desc">
                         {{#each orderusTabelDataRUS}}

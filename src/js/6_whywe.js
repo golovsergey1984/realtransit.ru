@@ -17,7 +17,7 @@ const dbWhyyWeInfoBox = [
     whyWeBoxtitleRUS: 'Ваш сайт, который продает',
     whyWeBoxtitleENG: 'Your website that sells',
     whyWeBoxSubtitleRUS:
-      'Мы смотрим на сайт прежде всего глазами предпренимателей и...',
+      'Мы смотрим на сайт прежде всего глазами предпринимателей и...',
     whyWeBoxSubtitleENG:
       'We look at the site primarily through the eyes of entrepreneurs and...',
     whyWeCircleNumber: '1',
@@ -247,3 +247,16 @@ function whyweModalClose(event) {
   whyWeModalContainer.classList.add('hide');
   whyweModalWindow[wyweDataNameCurrentEvent].classList.add('hide');
 }
+
+const nodeWhyWeModalContentBox = document.querySelectorAll(
+  '.whywe-modal-container',
+);
+const whyWeModalContentBox = Array.from(nodeWhyWeModalContentBox);
+
+whyWeModalContainer.addEventListener('click', function(event) {
+  if (whyWeModalContentBox[wyweDataNameCurrentEvent].contains(event.target)) {
+    return;
+  } else {
+    whyweModalClose();
+  }
+});
