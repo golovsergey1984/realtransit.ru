@@ -1,6 +1,6 @@
 const dbBpackingMainPage = [
   {
-    bpackingMainTitleRUS: 'Слои упаковки Вашего бизнеса',
+    bpackingMainTitleRUS: 'Слои упаковки Вашего бизнеса в интернете',
     bpackingMainTitleENG: 'Layers packaging of your business',
     bpackingbuttonsBox: [
       {
@@ -15,11 +15,11 @@ const dbBpackingMainPage = [
       {
         bPackingCaseDataName: '', // Указываем название Базы Данных (переменная), в которой лежат кэйсы по данной ссылке
         bPackingBtnBoxPosition: 'bpacking-box-btn-pos-2 ',
-        bPackingBtnBoxRUS: 'Визуальный',
-        bPackingBtnBoxENG: 'Visual',
+        bPackingBtnBoxRUS: 'Технологический',
+        bPackingBtnBoxENG: 'Technological',
         bPackingBtnBoxURL: 'images/Business_pack/box_2.png',
-        bPackingBtnDetailTxtRUS: 'Текст секции "Визуальный"',
-        bPackingBtnDetailTxtENG: 'Some text of "Visual" section',
+        /*         bPackingBtnDetailTxtRUS: 'Текст секции "Визуальный"',
+        bPackingBtnDetailTxtENG: 'Some text of "Visual" section', */
       },
       {
         bPackingCaseDataName: '', // Указываем название Базы Данных (переменная), в которой лежат кэйсы по данной ссылке
@@ -27,17 +27,17 @@ const dbBpackingMainPage = [
         bPackingBtnBoxRUS: 'Смысловой',
         bPackingBtnBoxENG: 'Semantic',
         bPackingBtnBoxURL: 'images/Business_pack/box_3.png',
-        bPackingBtnDetailTxtRUS: 'Текст секции "Смысловой"',
-        bPackingBtnDetailTxtENG: 'Some text of "Semantic" section',
+        /*         bPackingBtnDetailTxtRUS: 'Текст секции "Смысловой"',
+        bPackingBtnDetailTxtENG: 'Some text of "Semantic" section', */
       },
       {
         bPackingCaseDataName: '', // Указываем название Базы Данных (переменная), в которой лежат кэйсы по данной ссылке
         bPackingBtnBoxPosition: 'bpacking-box-btn-pos-4 ',
-        bPackingBtnBoxRUS: 'Технологический',
-        bPackingBtnBoxENG: 'Technological',
+        bPackingBtnBoxRUS: 'Визуальный',
+        bPackingBtnBoxENG: 'Visual',
         bPackingBtnBoxURL: 'images/Business_pack/box_4.png',
-        bPackingBtnDetailTxtRUS: 'Текст секции "Технологический"',
-        bPackingBtnDetailTxtENG: 'Some text of "Technological" section',
+        /*         bPackingBtnDetailTxtRUS: 'Текст секции "Технологический"',
+        bPackingBtnDetailTxtENG: 'Some text of "Technological" section', */
       },
       {
         bPackingCaseDataName: '', // Указываем название Базы Данных (переменная), в которой лежат кэйсы по данной ссылке
@@ -45,8 +45,8 @@ const dbBpackingMainPage = [
         bPackingBtnBoxRUS: 'Аналитический',
         bPackingBtnBoxENG: 'Analytical',
         bPackingBtnBoxURL: 'images/Business_pack/box_5.png',
-        bPackingBtnDetailTxtRUS: 'Текст секции "Аналитический"',
-        bPackingBtnDetailTxtENG: 'Some text of "Analytical" section',
+        /*         bPackingBtnDetailTxtRUS: 'Текст секции "Аналитический"',
+        bPackingBtnDetailTxtENG: 'Some text of "Analytical" section', */
       },
     ],
     bpackingbuttonsDetail: [
@@ -78,17 +78,17 @@ function bPackingBtnBoxClick(event) {}
 
 const nodeBpackingBtnsBox = document.querySelectorAll('.bpacking-box-btn');
 const bPackingBtnsBox = Array.from(nodeBpackingBtnsBox);
-const bPackingDetailBoxTxt = document.querySelector(
+/* const bPackingDetailBoxTxt = document.querySelector(
   '.bpacking-box-details-txt',
-);
+); */
 for (const bPackingCurrentBtnBox of bPackingBtnsBox) {
   bPackingCurrentBtnBox.addEventListener('mouseover', function(event) {
     const bPackingBtnBoxMouseOverHref = bPackingCurrentBtnBox.getAttribute(
       'href',
     );
-    const bPackingDetailBoxTxtData = bPackingCurrentBtnBox.getAttribute(
+    /*     const bPackingDetailBoxTxtData = bPackingCurrentBtnBox.getAttribute(
       'data-txt',
-    );
+    ); */
     for (let z = 0; z < bPackingBtnsBox.length; z++) {
       bPackingBtnsBox[z].classList.remove('bpacking-box-btn-active');
     }
@@ -100,11 +100,11 @@ for (const bPackingCurrentBtnBox of bPackingBtnsBox) {
       '.bpacking-box-details-txt',
     ); */
 
-    bPackingDetailBoxTxt.innerHTML = bPackingDetailBoxTxtData;
+    /* bPackingDetailBoxTxt.innerHTML = bPackingDetailBoxTxtData; */
   });
 }
 bPackingOnLoad();
 function bPackingOnLoad() {
   bPackingBtnsBox[0].classList.add('bpacking-box-btn-active');
-  bPackingDetailBoxTxt.innerHTML = bPackingBtnsBox[0].getAttribute('data-txt');
+  /*  bPackingDetailBoxTxt.innerHTML = bPackingBtnsBox[0].getAttribute('data-txt'); */
 }

@@ -5,6 +5,7 @@ const dbOrderUsButtons = [
         orderUsCaseDataName: 'dbOrderUsOnePage', // Указываем название Базы Данных (переменная), в которой лежат кэйсы по данной ссылке
         orderUsBtnTitleRUS: 'Одностраничный сайт',
         orderUsBtnTitleENG: 'Landing page',
+        orderUsBtnActive: 'orderus-button-case-svg-active',
         orderUsBtnSVG: 'graphs',
       },
       {
@@ -12,23 +13,27 @@ const dbOrderUsButtons = [
         orderUsBtnTitleRUS: 'Многостраничный сайт',
         orderUsBtnTitleENG: 'Multi-page site',
         orderUsBtnSVG: 'laptop',
+        orderUsBtnActive: '',
       },
       {
         orderUsCaseDataName: 'dbOrderUsOnlineStore', // Указываем название Базы Данных (переменная), в которой лежат кэйсы по данной ссылке
         orderUsBtnTitleRUS: 'Интернет-магазин',
         orderUsBtnTitleENG: 'Online store',
+        orderUsBtnActive: '',
         orderUsBtnSVG: 'storebasket',
       },
       {
         orderUsCaseDataName: 'dbOrderUsContextAdv', // Указываем название Базы Данных (переменная), в которой лежат кэйсы по данной ссылке
         orderUsBtnTitleRUS: 'Контекстная реклама',
         orderUsBtnTitleENG: 'Сontextual advertising',
+        orderUsBtnActive: '',
         orderUsBtnSVG: 'advertising',
       },
       {
         orderUsCaseDataName: 'dbOrderUsSEO', // Указываем название Базы Данных (переменная), в которой лежат кэйсы по данной ссылке
         orderUsBtnTitleRUS: 'CEO продвижение',
         orderUsBtnTitleENG: 'SEO promotion',
+        orderUsBtnActive: '',
         orderUsBtnSVG: 'wand',
       },
     ],
@@ -429,8 +434,37 @@ function orderUsBuildCaseBox(items) {
     onChangeEng(sourceCase);
   }
 }
+const nodeOrderUsBtnsPrices = document.querySelectorAll(
+  '.orderus-button-case-price',
+);
+const orderUsBtnsPrices = Array.from(nodeOrderUsBtnsPrices);
+const nodeOrderUsBtnsPricesSVG = document.querySelectorAll(
+  '.orderus-button-case-svg',
+);
+const orderUsBtnsPricesSVG = Array.from(nodeOrderUsBtnsPricesSVG);
 
 function orderUsCasePriceClick(event) {
+  //Удаляем выделение всех активных кнопок
+
+  for (let z = 0; z < orderUsBtnsPrices.length; z++) {
+    orderUsBtnsPricesSVG[z].classList.remove('orderus-button-case-svg-active');
+  }
+  //Добавляем текущей кнопке статус active
+  event.children[0].classList.add('orderus-button-case-svg-active');
+
+  //Определяем текущей язык
+  let orderUsCurrentLang = event.getAttribute('data-leng');
+  // Если текущий язык - русский, активируем статус у нижнего соседненго элемента, иначе у верхнего
+  if (orderUsCurrentLang == 'rus') {
+    event.nextElementSibling.children[0].classList.add(
+      'orderus-button-case-svg-active',
+    );
+  } else {
+    event.previousElementSibling.children[0].classList.add(
+      'orderus-button-case-svg-active',
+    );
+  }
+
   // Берем массив всех активных в данный момент карточек и удаляем их
   const nodeOrderUsCardBox = document.querySelectorAll(
     '.orderus-item-card-box',

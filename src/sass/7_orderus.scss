@@ -61,7 +61,6 @@
   font-weight: 500;
   color: #141414;
   cursor: pointer;
-
   .orderus-button-case-svg {
     width: 30px;
     height: 30px;
@@ -71,8 +70,10 @@
     transition-duration: 2s;
     fill: #c5c5c5;
   }
+  .orderus-button-case-svg-active {
+    fill: red;
+  }
 }
-
 .orderus-button-case-price:hover {
   .orderus-button-case-svg {
     transition-duration: 2s;

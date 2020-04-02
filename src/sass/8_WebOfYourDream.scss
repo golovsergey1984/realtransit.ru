@@ -1,0 +1,157 @@
+.bg-Slide8-grad {
+  width: 100%;
+  height: 100vh;
+  padding-top: 16%;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  transform: rotate(-180deg);
+  background-blend-mode: multiply;
+}
+
+.yourdreame-box {
+  width: 100%;
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: rgb(255, 255, 140); */
+}
+
+.yourdreame-h2 {
+  width: 100%;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.yourdreame-bg-main-box {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  /*  background-color: rgb(255, 255, 122); */
+}
+
+.yourdreame-bg-main-box-SVG,
+.yourdreame-bg-main-box-SVG-arc {
+  width: 65%;
+  height: 100%;
+  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.yourdreame-svg-circle-0 {
+  animation-fill-mode: forwards;
+  opacity: 0;
+  fill: #ff696d;
+}
+
+.yourdreame-svg-circle-1 {
+  animation-fill-mode: forwards;
+  opacity: 0;
+  fill: #ff4d52;
+}
+
+.yourdreame-svg-circle-2 {
+  animation-fill-mode: forwards;
+  opacity: 0;
+  fill: #ff2b30;
+}
+
+.yourdreame-svg-circle-3 {
+  animation-fill-mode: forwards;
+  fill: #ef0006;
+  opacity: 0;
+}
+
+@keyframes change_fill_active {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes change_fill_passive {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.yourdreame-number {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.yourdreame-number-1 {
+  position: absolute;
+  top: 86%;
+  left: 35.2%;
+  color: #ff696d;
+}
+
+.yourdreame-number-2 {
+  position: absolute;
+  top: 70%;
+  left: 44%;
+  color: #ff4c51;
+}
+
+.yourdreame-number-3 {
+  position: absolute;
+  top: 70%;
+  left: 54%;
+  color: #ff2a30;
+}
+
+.yourdreame-number-4 {
+  position: absolute;
+  top: 86%;
+  left: 62.7%;
+  color: #ef0006;
+}
+
+.yourdreame-footer-box {
+  width: 100%;
+  position: absolute;
+  top: 90%;
+  left: 1%;
+}
+
+.yourdreame-footer-txt {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
