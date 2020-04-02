@@ -275,7 +275,7 @@ const dbOrderUsContextAdv = [
   {
     cases: [
       {
-        orderUsCaseImg: 'images/Order_us/Context_adv/man_1.png',
+        orderUsCaseImg: 'images/Order_us/Context_adv/pic_1.png',
         orderUsCaseImgAdvRUS: 'images/Order_us/adv.png',
         orderUsCaseImgAdvENG: '',
         orderUsBtnCaseTitleRUS: 'Яндекс+Google',
