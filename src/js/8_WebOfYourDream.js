@@ -5,22 +5,24 @@ const nodeYourDreameSVG = document.querySelectorAll(
 );
 const yourDreameSVG = Array.from(nodeYourDreameSVG);
 
-var yourDreameSVGCount = 0;
+var yourDreameSVGCount = 1;
 
 function yourDreameSlideVisible() {
+  yourDreameSVG[0].children[0].style.animationName = 'change_fill_active';
+  yourDreameSVG[0].children[0].style.animationDuration = '4s';
+
   setTimeout(function() {
-    console.log('Уже работаю');
     yourDreameSVG[yourDreameSVGCount].children[0].style.animationName =
       'change_fill_active';
     yourDreameSVG[yourDreameSVGCount].children[0].style.animationDuration =
-      '5s';
+      '4s';
     yourDreameSVGCount++;
     if (yourDreameSVGCount < yourDreameSVG.length) {
       loopCall();
     } else {
       yourDreameSVGCount = 0;
     }
-  }, 1000);
+  }, 500);
   function loopCall() {
     yourDreameSlideVisible();
   }
@@ -31,6 +33,26 @@ function yourDreameSlideVisible() {
   } */
 }
 
+/* function yourDreameCicleLoop(yourDreameSVGCount) {
+  console.log(yourDreameSVGCount);
+  setTimeout(function() {
+    yourDreameSVG[yourDreameSVGCount].children[0].style.animationName =
+      'change_fill_active';
+    yourDreameSVG[yourDreameSVGCount].children[0].style.animationDuration =
+      '5s';
+    yourDreameSVGCount = yourDreameSVGCount + 1;
+    console.log(yourDreameSVGCount);
+    if (yourDreameSVGCount < yourDreameSVG.length) {
+      loopCall();
+    } else {
+      yourDreameSVGCount = 0;
+    }
+  }, 1000);
+  function loopCall() {
+    yourDreameCicleLoop();
+  }
+} */
+
 function yourDreameSlideUnVisible() {
   for (let z = 0; z < yourDreameSVG.length; z++) {
     yourDreameSVG[z].children[0].style.animationName = 'change_fill_passive';
@@ -40,7 +62,7 @@ function yourDreameSlideUnVisible() {
 }
 
 //Intersection Observer API: функция, которая наблюдает за элементом и его появлением в браузере при пролистывании
-const observer = new IntersectionObserver(
+const yourDreameObserver = new IntersectionObserver(
   function(entries) {
     if (entries[0].isIntersecting === true) {
       yourDreameSlideVisible();
@@ -52,4 +74,4 @@ const observer = new IntersectionObserver(
   { threshold: [1] },
 );
 
-observer.observe(yourDreameSlide);
+yourDreameObserver.observe(yourDreameSlide);

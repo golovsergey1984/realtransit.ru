@@ -1,0 +1,126 @@
+.geography-box {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.geography-title-box {
+  width: 90%;
+  text-align: center;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.geography-h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  color: #333333;
+}
+
+.geography-map-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  /*   background-color: rgb(255, 100, 100); */
+}
+
+.geography-map-img {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/Geography/map.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.geography-svg-rus-box {
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  top: 20%;
+  left: 76%;
+  /*  background-color: red; */
+}
+
+.geography-svg-ukraine-box {
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  top: 29%;
+  left: 57%;
+}
+
+.geography-svg-belorus-box {
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  top: 23.5%;
+  left: 54.5%;
+}
+
+.geography-svg-germany-box {
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  top: 26.5%;
+  left: 48.5%;
+}
+
+.geography-svg-canada-box {
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  top: 23%;
+  left: 5%;
+}
+
+.geography-svg-usa-box {
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  top: 35%;
+  left: 10%;
+}
+
+.geography-svg-circle-one {
+  fill: #ef0006;
+  opacity: 0.2;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse111 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+.geography-svg-circle-two {
+  fill: none;
+  stroke: #ef0006;
+  stroke-width: 1.5;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse112 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}

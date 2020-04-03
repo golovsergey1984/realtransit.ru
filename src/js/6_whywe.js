@@ -198,6 +198,66 @@ function buildSectionWhyWeInfoBox(items) {
     .insertAdjacentHTML('beforeend', markup);
 }
 
+//запускаем асинхронное мигание колец
+const whyWeSlide = document.querySelector('.whywe-box');
+const nodewhyWeImpulseCircle = document.querySelectorAll('.why-we-circle-box');
+const whyWeImpulseCircle = Array.from(nodewhyWeImpulseCircle);
+var r = 0;
+function whyWeSlideVisible() {
+  whyWeImpulseCircle[r].children[0].style.animationName = 'pulse63';
+  whyWeImpulseCircle[r].children[0].children[0].style.animationName = 'pulse62';
+  whyWeImpulseCircle[
+    r
+  ].children[0].children[0].children[0].style.animationName = 'pulse61';
+
+  whyWeLoopCircles();
+}
+
+function whyWeLoopCircles() {
+  setTimeout(function() {
+    whyWeImpulseCircle[r].children[0].style.animationName = '';
+    whyWeImpulseCircle[r].children[0].children[0].style.animationName = '';
+    whyWeImpulseCircle[
+      r
+    ].children[0].children[0].children[0].style.animationName = '';
+    if (r === whyWeImpulseCircle.length - 1) {
+      r = 0;
+    } else {
+      r++;
+    }
+    whyWeImpulseCircle[r].children[0].style.animationName = 'pulse63';
+    whyWeImpulseCircle[r].children[0].children[0].style.animationName =
+      'pulse62';
+    whyWeImpulseCircle[
+      r
+    ].children[0].children[0].children[0].style.animationName = 'pulse61';
+  }, 3000);
+  setTimeout(function() {
+    whyWeLoopCircles();
+  }, 3000);
+}
+
+var j = 0;
+//Intersection Observer API: функция, которая наблюдает за элементом и его появлением в браузере при пролистывании
+const whyWeObserver = new IntersectionObserver(
+  function(entries) {
+    if (j === 0) {
+      if (entries[0].isIntersecting === true) {
+        j++;
+        whyWeSlideVisible();
+      } else {
+        return;
+      }
+    } else {
+      return;
+    }
+  },
+
+  { threshold: [1] },
+);
+
+whyWeObserver.observe(whyWeSlide);
+
 // Шаблон Модалки
 const sourceModalBox = document.getElementById('why-we-modal').innerHTML;
 itemsTemplate = Handlebars.compile(sourceModalBox);
