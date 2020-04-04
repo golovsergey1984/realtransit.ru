@@ -13,12 +13,10 @@ geographyCircleImpulseStart(geographyCircleOnChange);
 function geographyCircleImpulseStart(i) {
   geographyCirclesOne[geographyCircleOnChange].style.animationName = 'pulse111';
   geographyCirclesTwo[geographyCircleOnChange].style.animationName = 'pulse112';
-  console.log('Счетчик до settime out= ' + geographyCircleOnChange);
   geographyLoopCircles();
 }
 function geographyLoopCircles() {
   setTimeout(function() {
-    console.log('Вошло settime out= ' + geographyCircleOnChange);
     geographyCirclesOne[geographyCircleOnChange].style.animationName = '';
     geographyCirclesTwo[geographyCircleOnChange].style.animationName = '';
     if (geographyCircleOnChange === geographyCirclesTwo.length - 1) {
@@ -31,7 +29,6 @@ function geographyLoopCircles() {
       'pulse111';
     geographyCirclesTwo[geographyCircleOnChange].style.animationName =
       'pulse112';
-    console.log('Ушло settime out= ' + geographyCircleOnChange);
   }, 3000);
   setTimeout(function() {
     geographyLoopCircles();

@@ -4,6 +4,7 @@
     <a name="web working"></a>
     <div class="ellipse"> </div>
     <div class="web-working-box">
+
         <div class="web-working-title-box">
             <h2 class="normolize-pm web-working-h2" data-leng="rus">Заставьте сайт работать на вас!</h2>
             <h2 class="normolize-pm web-working-h2 hide" data-leng="eng">Make the site work for you!</h2>
@@ -18,7 +19,7 @@
         </div>
         <div class="web-working-block-wrapper">
             <div class="web-working-arrow-left">
-                <button class="web-working-btn-left" name="" onclick="">
+                <button class="web-working-btn-left" name="" onclick="webWorkingArrowLeft()">
                     <div class="arrow-line-left">
                         <div class="arrow-line-left-top"></div>
                         <div class="arrow-line-left-bottom"></div>
@@ -26,105 +27,30 @@
                 </button>
             </div>
             <div class="web-working-img-container">
-                <div class="web-slide-box web-working-slide-1 web-slide-tall" onmouseenter="mouseEnterSlide(this)"
-                    onmouseleave="mouseleaveSlide(this)">
-                    <div class="web-slide-box-info " onclick="webRedirectCase(this)" href="https://www.google.com.ua/">
+                <script id="web-working-img-box" type="text/x-handlebars-template">
 
+                <div class="web-slide-box web-working-slide {{webWorkingItemIMGDisplay}}" style="background-image: url('{{ webWorkingItemImg}}')"
+                    onmouseenter="mouseEnterSlide(this)" onmouseleave="mouseleaveSlide(this)">
+                    <div class="web-slide-box-info " onclick="webRedirectCase(this)" href="{{webWorkingItemHref}}">
+                       
                         <div class="web-slide-case-box hide">
                             <!-- <div class="web-slide-box-ear"></div> -->
-                            <p class="normolize-pm web-working-case-company-txt" data-leng="rus">гуугл</p>
-                            <p class="normolize-pm web-working-case-description-txt" data-leng="rus">Поисковой портал
+                            <p class="normolize-pm web-working-case-company-txt" data-leng="rus">{{webWorkingItemCompanyRUS}}</p>
+                            <p class="normolize-pm web-working-case-description-txt" data-leng="rus">{{webWorkingItemDescriptionRUS}}
                             </p>
-                            <p class="normolize-pm  web-working-case-format-txt" data-leng="rus">Лендинг</p>
-                            <p class="normolize-pm web-working-case-company-txt hide" data-leng="eng">GOOGLE</p>
-                            <p class="normolize-pm web-working-case-description-txt hide" data-leng="eng">Search portal
+                            <p class="normolize-pm  web-working-case-format-txt" data-leng="rus">{{webWorkingItemDFormatRUS}}</p>
+                            <p class="normolize-pm web-working-case-company-txt hide" data-leng="eng">{{webWorkingItemCompanyENG}}</p>
+                            <p class="normolize-pm web-working-case-description-txt hide" data-leng="eng">{{webWorkingItemDescriptionENG}}
                             </p>
-                            <p class="normolize-pm  web-working-case-format-txt hide" data-leng="eng">Landing</p>
+                            <p class="normolize-pm  web-working-case-format-txt hide" data-leng="eng">{{webWorkingItemFormatENG}}</p>
                         </div>
                     </div>
                 </div>
-                <div class="web-slide-box web-working-slide-2" onmouseenter="mouseEnterSlide(this)"
-                    onmouseleave="mouseleaveSlide(this)">
-                    <div class="web-slide-box-info" onclick="webRedirectCase(this)" href="https://uk-ua.facebook.com/">
-                        <!--  <div class="web-slide-box-ear"></div> -->
-                        <div class="web-slide-case-box hide">
-                            <p class="normolize-pm web-working-case-company-txt" data-leng="rus">Фэйсбук</p>
-                            <p class="normolize-pm web-working-case-description-txt" data-leng="rus">Социальные сети</p>
-                            <p class="normolize-pm  web-working-case-format-txt" data-leng="rus">Корпоративный сайт</p>
-                            <p class="normolize-pm web-working-case-company-txt hide" data-leng="eng">FACEBOOK</p>
-                            <p class="normolize-pm web-working-case-description-txt hide" data-leng="eng">Social
-                                networks</p>
-                            <p class="normolize-pm  web-working-case-format-txt hide" data-leng="eng">Corporate website
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="web-slide-box web-working-slide-3" onmouseenter="mouseEnterSlide(this)"
-                    onmouseleave="mouseleaveSlide(this)">
-                    <div class="web-slide-box-info" onclick="webRedirectCase(this)" href="https://www.instagram.com/">
-                        <!-- <div class="web-slide-box-ear"></div> -->
-                        <div class="web-slide-case-box hide">
-                            <p class="normolize-pm web-working-case-company-txt" data-leng="rus">Инстаграмм</p>
-                            <p class="normolize-pm web-working-case-description-txt" data-leng="rus">Социальные сети</p>
-                            <p class="normolize-pm  web-working-case-format-txt" data-leng="rus">Лендинг</p>
-                            <p class="normolize-pm web-working-case-company-txt hide" data-leng="eng">instagram</p>
-                            <p class="normolize-pm web-working-case-description-txt hide" data-leng="eng">Social
-                                networks</p>
-                            <p class="normolize-pm  web-working-case-format-txt hide" data-leng="eng">Landing</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="web-slide-box web-working-slide-4" onmouseenter="mouseEnterSlide(this)"
-                    onmouseleave="mouseleaveSlide(this)">
-                    <div class="web-slide-box-info" onclick="webRedirectCase(this)" href="https://www.viber.com/ru/">
-                        <!-- <div class="web-slide-box-ear"></div> -->
-                        <div class="web-slide-case-box hide">
-                            <p class="normolize-pm web-working-case-company-txt" data-leng="rus">вайбер</p>
-                            <p class="normolize-pm web-working-case-description-txt" data-leng="rus">Мессенджер</p>
-                            <p class="normolize-pm  web-working-case-format-txt" data-leng="rus">Интернет магазин</p>
-                            <p class="normolize-pm web-working-case-company-txt hide" data-leng="eng">VIBER</p>
-                            <p class="normolize-pm web-working-case-description-txt hide" data-leng="eng">Messenger</p>
-                            <p class="normolize-pm  web-working-case-format-txt hide" data-leng="eng">Online store
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="web-slide-box web-working-slide-5" onmouseenter="mouseEnterSlide(this)"
-                    onmouseleave="mouseleaveSlide(this)">
-                    <div class="web-slide-box-info" onclick="webRedirectCase(this)" href="https://telegram.org/">
-                        <!-- <div class="web-slide-box-ear"></div> -->
-                        <div class="web-slide-case-box hide">
-                            <p class="normolize-pm web-working-case-company-txt" data-leng="rus">телеграм</p>
-                            <p class="normolize-pm web-working-case-description-txt" data-leng="rus">Мессенджер</p>
-                            <p class="normolize-pm  web-working-case-format-txt" data-leng="rus">Корпоративный сайт</p>
-                            <p class="normolize-pm web-working-case-company-txt hide" data-leng="eng">telegram</p>
-                            <p class="normolize-pm web-working-case-description-txt hide" data-leng="eng">Messenger</p>
-                            <p class="normolize-pm  web-working-case-format-txt hide" data-leng="eng">Corporate website
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="web-slide-box web-working-slide-6 web-slide-wide" onmouseenter="mouseEnterSlide(this)"
-                    onmouseleave="mouseleaveSlide(this)">
-                    <div class="web-slide-box-info" onclick="webRedirectCase(this)" href="https://www.skype.com/ru/">
-                        <!-- <div class="web-slide-box-ear"></div> -->
-                        <div class="web-slide-case-box hide">
-                            <p class="normolize-pm web-working-case-company-txt" data-leng="rus">скайп</p>
-                            <p class="normolize-pm web-working-case-description-txt" data-leng="rus">Видео связь</p>
-                            <p class="normolize-pm  web-working-case-format-txt" data-leng="rus">Корпоративный портал
-                            </p>
-                            <p class="normolize-pm web-working-case-company-txt hide" data-leng="eng">skype</p>
-                            <p class="normolize-pm web-working-case-description-txt hide" data-leng="eng">Video
-                                communication</p>
-                            <p class="normolize-pm  web-working-case-format-txt hide" data-leng="eng">corporate portal
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
+             
+                </script>
             </div>
             <div class="web-working-arrow-right">
-                <button class="web-working-btn-right" name="" onclick="">
+                <button class="web-working-btn-right" name="" onclick="webWorkingArrowRight()">
                     <div class="arrow-line-right">
                         <div class="arrow-line-right-top"></div>
                         <div class="arrow-line-right-bottom"></div>
