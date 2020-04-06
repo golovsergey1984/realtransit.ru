@@ -30,12 +30,38 @@
   flex-wrap: no-wrap;
 }
 
+.bpacking-bg-cirle-one {
+  width: 45%;
+  height: 80%;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+
+  z-index: 995;
+}
+.bpacking-bg-cirle-two {
+  width: 70%;
+  height: 70%;
+  border-radius: 100%;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 996;
+}
+
 .bpacking-box-img {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-size: 60% 95%;
   background-position: 25% 100%;
+  z-index: 997;
 }
 
 .bpacking-box-btn {
@@ -52,6 +78,7 @@
   outline: none;
   color: #000000;
   cursor: pointer;
+  z-index: 997;
 }
 .bpacking-box-btn-active {
   background-color: #ef0006;
@@ -142,3 +169,188 @@
   color: #000000;
 }
  */
+
+// Модалка
+
+.bpackingModal {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: black;
+  z-index: 1000;
+}
+
+.bpacking-modal-container {
+  width: 48%;
+  height: 70%;
+  position: relative;
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: linear-gradient(
+    180deg,
+    #f4f4f4 0%,
+    #f6f6f6 13.02%,
+    #f7f7f7 28.65%,
+    #f8f8f8 43.75%,
+    #fafafa 57.81%,
+    #fdfdfd 73.44%,
+    #fdfdfd 86.46%,
+    #ffffff 100%
+  );
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.bpacking-modal-grad {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url('../images/rivals/Modal/modal_1/bg_modal_1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+  border-radius: 10px;
+}
+
+.bpacking-modal-close {
+  width: 31px;
+  height: 31px;
+  border-radius: 100%;
+  border: solid #ef0006 1px;
+  outline: none;
+  position: absolute;
+  top: 2%;
+  left: 92%;
+  cursor: pointer;
+  background-color: white;
+  font-size: 18px;
+  color: #ef0006;
+}
+.bpacking-modal-close:hover {
+  background-color: #ef0006;
+  border: solid white 1px;
+  color: white;
+}
+
+.bpacking-modal-content-box {
+  position: absolute;
+  top: 13%;
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  /*   background-color: green; */
+}
+
+.bpacking-modal-title {
+  width: 98%;
+  line-height: 30px;
+  background-color: white;
+}
+
+.bpacking-h2-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  padding-left: 20px;
+}
+
+.bpacking-modal-img-box {
+  width: 25%;
+  height: 90%;
+  /*   background-color: red; */
+  position: relative;
+}
+
+.bpacking-modal-circle-box {
+  width: 70%;
+  height: 31%;
+  position: relative;
+  /*  background-color: green; */
+  position: absolute;
+  top: 50%;
+  left: 23%;
+  transform: translateY(-50%);
+}
+
+.bpacking-modal-circle-1 {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+}
+
+.bpacking-modal-circle-2 {
+  width: 75%;
+  height: 75%;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bpacking-modal-circle-3 {
+  width: 70%;
+  height: 70%;
+  border-radius: 100%;
+  background: #ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bpacking-modal-circle-svg {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* .modal-circle-number {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  color: #ff6347;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+.bpacking-modal-description-box {
+  width: 75%;
+  height: 90%;
+  /* background-color: blue; */
+  position: relative;
+}
+
+.bpacking-modal-description-txt {
+  width: 80%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333333;
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+
+  /* padding-left: 20px; */
+}

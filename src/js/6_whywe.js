@@ -286,6 +286,7 @@ function whyweScrollOff() {
   });
 }
 
+//Определяем текущую вкладку, и закрываем её
 const nodeCurrentReasonOnClick = document.querySelectorAll('.why-we-wrapper');
 const currentReasonOnClick = Array.from(nodeCurrentReasonOnClick);
 var wyweDataNameCurrentEvent = null;

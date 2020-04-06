@@ -1,0 +1,253 @@
+.bg-Slide12-grad {
+  width: 100%;
+  height: 100vh;
+  padding-top: 16%;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  transform: rotate(-180deg);
+  background-blend-mode: multiply;
+}
+
+.questions-box {
+  width: 100%;
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: rgb(255, 255, 140); */
+}
+
+.questions-h2 {
+  width: 100%;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.questions-h3 {
+  width: 100%;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.questions-bg-main-box {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  /*  background-color: rgb(255, 255, 122); */
+}
+
+.questions-feedback-form {
+  width: 60%;
+  height: 78%;
+  margin: auto auto;
+  /*   background-color: rgb(255, 101, 101); */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.questions-form-column-1 {
+  width: 50%;
+  /* background-color: green; */
+}
+
+.questions-form-column-2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
+
+.questions-form-name {
+  width: 90%;
+  height: 15%;
+}
+.questions-input-name {
+  width: 100%;
+  height: 100%;
+  line-height: 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: white;
+}
+.questions-input-name::placeholder {
+  color: white;
+}
+
+.questions-name-line {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.questions-form-mail {
+  width: 90%;
+  height: 15%;
+}
+.questions-input-mail {
+  width: 100%;
+  height: 100%;
+  line-height: 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+}
+.questions-input-mail::placeholder {
+  color: white;
+}
+
+.questions-mail-line {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.questions-form-phone {
+  width: 90%;
+  height: 15%;
+}
+.questions-input-phone {
+  width: 100%;
+  height: 100%;
+  line-height: 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+}
+.questions-input-phone::placeholder {
+  color: white;
+}
+
+.questions-phone-line {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.questions-form-question {
+  width: 90%;
+  height: 15%;
+}
+.questions-input-question {
+  width: 100%;
+  height: 100%;
+  line-height: 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+}
+.questions-input-question::placeholder {
+  color: white;
+}
+
+.questions-question-line {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.questions-question-submit {
+  width: 20%;
+  height: 12%;
+  background: #ef0006;
+  box-shadow: 0px 0px 20px #ef0006;
+  border-radius: 35px;
+  border: none;
+  outline: none;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  transition: 2s;
+  cursor: pointer;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.questions-question-submit:hover {
+  transition: 2s;
+  background: #7c0004;
+  box-shadow: 0px 0px 20px #ffffff;
+}
+
+.questions-footer {
+  width: 80%;
+  height: 22%;
+  /*   background-color: rgb(101, 255, 147); */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.questions-img-box {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  /*  background-color: blue; */
+}
+
+.questions-img-logo {
+  width: 45%;
+  height: 60%;
+}
+
+.questions-qoute-box {
+  width: 70%;
+  height: 100%;
+  /* background-color: green; */
+}
+
+.questions-socials-box {
+  width: 15%;
+  height: 100%;
+  /*  background-color: yellow; */
+}

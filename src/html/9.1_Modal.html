@@ -1,0 +1,49 @@
+<div class="bpackingModal hide">
+    <script id="bpacking-modal" type="text/x-handlebars-template">
+
+           <div class="bpacking-modal-container hide">
+            <div class="bpacking-modal-grad">
+                <button class="bpacking-modal-close" type="submit" onclick="bpackingModalClose(this)">X</button>
+                <div class="bpacking-modal-content-box">
+                    <div class="bpacking-modal-title">
+                        <h2 class="normolize-pm bpacking-h2-title" data-leng="rus">{{bpackingModalTitleRUS}}</h2>
+                        <h2 class="normolize-pm bpacking-h2-title hide" data-leng="eng">{{bpackingModalTitleENG}}</h2>
+                    </div>
+                    <div class="bpacking-modal-img-box ">
+                        <div class="bpacking-modal-circle-box">
+                            <div class="bpacking-modal-circle-1">
+                                <div class="bpacking-modal-circle-2 ">
+                                    <div class="bpacking-modal-circle-3">
+                                            <svg class="bpacking-modal-circle-svg">
+                                                <use class="" xlink:href="images/sprite.svg#{{bpackingModalCircleSVG}}">
+                                                 </use>
+                                            </svg>
+                                        <!-- <p class="normolize-pm bpacking-modal-circle-svg">{{bpackingModalCircleSVG}}</p> -->
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                      
+                       
+                     
+                    </div>
+                    <div class="bpacking-modal-description-box">
+                        <div class="bpacking-modal-description-txt">
+                            <p class="normolize-pm" data-leng="rus"> {{bpackingModalParagraphRUS1}}
+                                <p data-leng="rus"> {{bpackingModalParagraphRUS2}}</p>
+                            </p>
+                            <p class="normolize-pm hide" data-leng="eng"> {{bpackingModalParagraphENG1}}
+    
+                                <p class="hide" data-leng="eng"> {{bpackingModalParagraphENG2}}</p>
+                            </p>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    </script>
+</div>

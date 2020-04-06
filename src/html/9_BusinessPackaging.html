@@ -3,6 +3,9 @@
 <div class="bgimage bg-Grey" data-bgc="bright">
     <a name="buisness packing"></a>
     <div class="ellipse"></div>
+    <div class="bpacking-bg-cirle-one">
+        <div class="bpacking-bg-cirle-two"></div>
+    </div>
     <div class="bpacking-box">
         <script id="bpacking-main-wrapper" type="text/x-handlebars-template">
         <div class="bpacking-title-box">
@@ -10,16 +13,18 @@
             <h2 class="normolize-pm bpacking-h2 hide" data-leng="eng">{{bpackingMainTitleENG}}</h2>
         </div>
 
-
+        
+  
         <div class="bpacking-content-wrapper">
+     
             <div class="bpacking-box-img" style="background-image: url('images/Business_pack/box_1.png')">
             </div>
 
             {{#each bpackingbuttonsBox}}
-            <button type="button" class="bpacking-box-btn {{bPackingBtnBoxPosition}} "
-            href="{{bPackingBtnBoxURL}}" onclick="bPackingBtnBoxClick(this)" data-leng="rus" data-txt="{{bPackingBtnDetailTxtRUS}}">{{bPackingBtnBoxRUS}}</button>
-            <button type="button" class="bpacking-box-btn {{bPackingBtnBoxPosition}} hide"
-            href="{{bPackingBtnBoxURL}}"  onclick="bPackingBtnBoxClick(this)" data-leng="eng" data-txt="{{bPackingBtnDetailTxtENG}}">{{bPackingBtnBoxENG}}</button>
+            <button type="button" class="bpacking-box-btn {{bPackingBtnBoxPosition}} " data-name="{{bPackingBtnDataName}}" onclick="bpackingModalOpen(this)"
+            href="{{bPackingBtnBoxURL}}"  data-leng="rus" data-txt="{{bPackingBtnDetailTxtRUS}}">{{bPackingBtnBoxRUS}}</button>
+            <button type="button" class="bpacking-box-btn {{bPackingBtnBoxPosition}} hide" data-name="{{bPackingBtnDataName}}" onclick="bpackingModalOpen(this)"
+            href="{{bPackingBtnBoxURL}}"   data-leng="eng" data-txt="{{bPackingBtnDetailTxtENG}}">{{bPackingBtnBoxENG}}</button>
             {{/each}}
 
         </div>
