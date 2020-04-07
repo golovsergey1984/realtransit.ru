@@ -71,7 +71,8 @@ const dbBpackingModal = [
     bpackingModalParagraphRUS1:
       'Или же по-простому, то чем Вы привелкаете внимание (Триггеры). Есть определенные правила, где и как расставлять эти самые, так называемые «капканы». Например, если на вашем сайте человек проводит минуту и не знает, что делать дальше, то у него всплывает окно, где Вы предлагаете ему оставить свой номер телефона, что бы Ваш менеджер дал ему бесплатную консультацию. Эти методы работают на 100%. Поверьте.',
     bpackingModalParagraphRUS2: '',
-    bpackingModalParagraphENG1: '',
+    bpackingModalParagraphENG1:
+      'Or in a simple way, how do you attract attention (Triggers).  There are certain rules where and how to arrange these very so-called «traps».For example, if a person spends a minute on your website and does not know what to do next, then a window pops up where you offer him to leave his phone number so that your manager would give him a free consultation. These methods work 100%.. Believe me.',
 
     bpackingModalParagraphENG2: '',
     bpackingModalCircleSVG: 'conversion-layer',
@@ -82,7 +83,8 @@ const dbBpackingModal = [
     bpackingModalParagraphRUS1:
       'Это удобство и скорость, с которой клиент может получить информацию. В электронном варианте, это скорость загрузки сайта, адаптивность, юзабилити. В бумажном виде, это - удобство изучения медиакитов, презентаций, безошибочные тексты и так далее. Согласитесь, если Ваш сайт загружается минуту, а сайт Вашего конкурента 2 секунды, то велика вероятность, что вы можете потерять клиента, которому просто надоест ждать загрузки Вашего сайта. Ему без разницы где покупать, ему главное время. Это очень важный пугкт «упаковки бизнеса».',
     bpackingModalParagraphRUS2: '',
-    bpackingModalParagraphENG1: '',
+    bpackingModalParagraphENG1:
+      'This is the convenience and speed with which the client can receive information. In the electronic version, this is the speed of the site loading, adaptability, usability. In paper form, this is the convenience of studying media kits, presentations, error-free texts and so on. Agree, if your site loads a minute, and your competitors site 2 seconds, then it is likely that you can lose a client who just gets tired of waiting for your site to load. It does not matter to him where to buy, the main time is for him. This is a very important point of the «packaging business».',
 
     bpackingModalParagraphENG2: '',
     bpackingModalCircleSVG: 'technological-layer',
@@ -91,9 +93,10 @@ const dbBpackingModal = [
     bpackingModalTitleRUS: 'Смысловой слой',
     bpackingModalTitleENG: 'Sense layer',
     bpackingModalParagraphRUS1:
-      'Это суть. Это тот слой, который доносит до вашего потенциального клиента вашу экспертность Она может заключаться в конкретных цифрах - опыте, наградах, масштабов проектов и так далее. Очень важно не врать в этом вопросе, иначе можно неплохо подпортить свою репутацию, но и не хвастаться сильно иначе можно оттолкнуть клиента.',
+      'Это суть. Это тот слой, который доносит до вашего потенциального клиента вашу экспертность. Она может заключаться в конкретных цифрах - опыте, наградах, масштабов проектов и так далее. Очень важно не врать в этом вопросе, иначе можно неплохо подпортить свою репутацию, но и не хвастаться сильно иначе можно оттолкнуть клиента.',
     bpackingModalParagraphRUS2: '',
-    bpackingModalParagraphENG1: '',
+    bpackingModalParagraphENG1:
+      'This is the essence. This is the layer that conveys to your potential client your expertise. It may consist of specific numbers - experience, awards, the scope of projects, and so on. It’s very important not to lie in this matter, otherwise you can badly spoil your reputation, but also you can’t  boast much differently, you can push away the client.',
 
     bpackingModalParagraphENG2: '',
     bpackingModalCircleSVG: 'semantic-layer',
@@ -104,7 +107,8 @@ const dbBpackingModal = [
     bpackingModalParagraphRUS1:
       'Это ваше лицо в глазах потребителя. Правильный и привлекательный дизайн, который поможет Вам донести тот самый смысловой слой так, как Вы это планировали. Ведь будет обидно, если Вы, например, обладаете наградой лучшего дизайнерского агенства года, но Ваш сайт сделан чуть ли не в Word 2003 с великолепными заголовками того времени.',
     bpackingModalParagraphRUS2: '',
-    bpackingModalParagraphENG1: '',
+    bpackingModalParagraphENG1:
+      'This is your face in the eyes of the consumer. The correct and attractive design, which will help you to convey the same semantic layer as you planned it. After all, it will be a shame if, for example, you have received the award of the best design agency of the year, but your site is made almost in Word 2003 with magnificent headlines of that time.',
     bpackingModalParagraphENG2: '',
     bpackingModalCircleSVG: 'visual-layer',
   },
@@ -114,7 +118,8 @@ const dbBpackingModal = [
     bpackingModalParagraphRUS1:
       'Это Ваш личный слой. Другими словами, Вы должны постоянно анализировать свои ошибки и исправлять их, что бы исключить потери клиентов, а в совершенстве и прибыли. Например, установка Вебвизора от Яндекс на сайт поможет посмотреть почему пользователь ушел с сайта. Возможно ему не понравилась какая-то надпись или картинка. Анализ также очень важен в любом бизнесе, ведь нельзя сделать что-то идеальное сразу. Нужно постоянно улучшать то, что уже сделано.',
     bpackingModalParagraphRUS2: '',
-    bpackingModalParagraphENG1: '',
+    bpackingModalParagraphENG1:
+      'This is your personal layer. In other words, you must constantly analyze your mistakes and correct them in order to eliminate the loss of customers, and in the better case  and profit. For example, installing Yandex.Webvisor on a site will help you see why the user has left the site. Perhaps he did not like some inscription or picture. Analysis is also very important in any business, because you cannot do something ideal right away. It is necessary to constantly improve what has already been done.',
 
     bpackingModalParagraphENG2: '',
     bpackingModalCircleSVG: 'analytical-layer',
@@ -133,9 +138,6 @@ function bpackingBuildMainPage(items) {
     .querySelector('.bpacking-box')
     .insertAdjacentHTML('beforeend', markup);
 }
-
-// Определяем, какая кнопка нажата и запускаем модалку
-function bPackingBtnBoxClick(event) {}
 
 // Определяем, над какой кнопкой курсор, меняем коробку, меняем цвет кнопки, вставляем текст
 

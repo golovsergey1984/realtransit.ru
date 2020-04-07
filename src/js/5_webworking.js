@@ -124,7 +124,6 @@ var webWorkingPagesShown = 1;
 const webWorkingtotalFullPages = Math.ceil(
   dbwebWorkingGallery.length / webWorkingGalleryLimit,
 );
-console.log('Полных страниц: ' + webWorkingtotalFullPages);
 
 webWorkingBuildGallery(dbwebWorkingGallery);
 /* console.log(webWorkingCountStart);
@@ -150,11 +149,8 @@ function webWorkingArrowRight() {
   webWorkingPagesShown++;
   if (webWorkingPagesShown > webWorkingtotalFullPages) {
     webWorkingPagesShown--;
-    console.log(webWorkingPagesShown);
     return;
   } else {
-    /*     console.log(webWorkingCountStart);
-    console.log(webWorkingtotalFullPages); */
     webWorkingDeleteGallery();
     webWorkingGalleryLimit = webWorkingGalleryLimit + webWorkingLimitCorrect;
     webWorkingBuildGallery(dbwebWorkingGallery);
@@ -163,7 +159,6 @@ function webWorkingArrowRight() {
 
 function webWorkingArrowLeft() {
   webWorkingPagesShown--;
-  console.log(webWorkingPagesShown);
   if (webWorkingPagesShown < 1) {
     webWorkingPagesShown++;
     return;
