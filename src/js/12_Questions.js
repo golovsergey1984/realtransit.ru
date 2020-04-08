@@ -1,15 +1,3 @@
-/* let questionsUserName = document.querySelector('.questions-input-name');
-const questionsNameLine = document.querySelector('.questions-name-line');
-
-let questionsUserMail = document.querySelector('.questions-input-mail');
-const questionsMailLine = document.querySelector('.questions-mail-line');
-
-let questionsUserPhone = document.querySelector('.questions-input-phone');
-const questionsPhoneLine = document.querySelector('.questions-phone-line');
-
-let questionsUserTxt = document.querySelector('.questions-input-question');
-const questionsTxtLine = document.querySelector('.questions-question-line'); */
-
 const nodeQuestionsUserName = document.querySelectorAll(
   '.questions-input-name',
 );

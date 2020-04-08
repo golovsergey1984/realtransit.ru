@@ -26,7 +26,6 @@ function hideSub(e) {
 // Отправка отчета на mail
 function mail() {
   let stat = 'сайт отклыли';
-  console.log(stat);
   Email.send({
     Host: 'smtp.gmail.com',
     Username: 'mavistepreport',
