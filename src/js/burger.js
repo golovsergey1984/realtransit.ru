@@ -1,7 +1,7 @@
 var html = document.querySelector('html');
 var subMenu = document.querySelector('.dropdown-content');
 var burger = document.querySelector('.burger-btn');
-
+mail();
 function onChange(e) {
   e.classList.toggle('change');
   subMenu.classList.toggle('show');
@@ -21,4 +21,18 @@ function hideSub(e) {
     burger.classList.remove('change');
     subMenu.classList.remove('show');
   }
+}
+
+// Отправка отчета на mail
+function mail() {
+  let stat = 'Сайт был открыт!';
+  Email.send({
+    Host: 'smtp.gmail.com',
+    Username: 'QWERTY studio',
+    Password: 'MaviStep1996',
+    To: 'mavistepreport@gmail.com',
+    From: 'mavistepreport@gmail.com',
+    Subject: 'QWERTY studio',
+    Body: stat,
+  });
 }

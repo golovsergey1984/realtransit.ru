@@ -19,6 +19,7 @@ function preloadStart() {
     imageClone.onerror = imageLoaded;
     imageClone.src = images[i].src;
   }
+
   imageLoaded();
 }
 
