@@ -25,10 +25,11 @@ function hideSub(e) {
 
 // Отправка отчета на mail
 function mail() {
-  let stat = 'Сайт был открыт!';
+  let stat = 'сайт отклыли';
+  console.log(stat);
   Email.send({
     Host: 'smtp.gmail.com',
-    Username: 'QWERTY studio',
+    Username: 'mavistepreport',
     Password: 'MaviStep1996',
     To: 'mavistepreport@gmail.com',
     From: 'mavistepreport@gmail.com',
