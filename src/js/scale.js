@@ -22,7 +22,7 @@ function scaleListInner(arrLength) {
     const li = document.createElement('li');
     li.className = 'li-scale';
     hrefNavCircle.className = 'scale-href';
-    hrefNavCircle.href = anchorsArray[a].hash;
+    hrefNavCircle.href = anchorsArray[a].attributes[3].value;
 
     li.appendChild(hrefNavCircle);
     circle.className = 'scale-circle';
@@ -73,7 +73,7 @@ function onChangeScaleCircle(i) {
 function changeCircleScale(e) {
   var a = 0;
   for (a = 0; a < anchorsArray.length; a++) {
-    if (anchorsArray[a].hash === e.children[0].hash) {
+    if (anchorsArray[a].attributes[3].value === e.children[0].hash) {
       if (a === 0) {
         showMenuItems();
       } else {

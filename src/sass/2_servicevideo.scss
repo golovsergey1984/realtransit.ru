@@ -87,6 +87,51 @@
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
 }
+
+
+/* Модальное окно */
+.serviceModal {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: black;
+  z-index: 1000;
+}
+
+.service-modal-close {
+  width: 31px;
+  height: 31px;
+  border-radius: 100%;
+  border: solid #ef0006 1px;
+  outline: none;
+  position: absolute;
+  top: 7%;
+  left: 82%;
+  cursor: pointer;
+  background-color: white;
+  font-size: 18px;
+  color: #ef0006;
+}
+.service-modal-close:hover {
+  background-color: #ef0006;
+  border: solid white 1px;
+  color: white;
+}
+
+.service-videoclip-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 70%;
+}
+
+
 @media (min-width: 650px) {
 }
 

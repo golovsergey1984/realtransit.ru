@@ -1,7 +1,7 @@
-const nodeList = document.querySelectorAll('a[href*="#"]');
+/* const nodeList = document.querySelectorAll('a[href*="#"]'); */
+const nodeList = document.querySelectorAll('[data-name="slide"]');
 const anchorsArray = Array.from(nodeList);
 const arrLength = anchorsArray.length;
-
 var i = 0;
 currentPageInner(i);
 totalPagesInner(arrLength);
@@ -12,7 +12,7 @@ window.addEventListener('mousewheel', throttle(callback, 800));
 
 function throttle(fn, wait) {
   var time = Date.now();
-  return function() {
+  return function () {
     if (time + wait - Date.now() < 0) {
       fn();
       time = Date.now();
@@ -37,7 +37,8 @@ function scroll() {
   if (i > 0) {
     hideMenuItems();
   }
-  location = anchorsArray[i].hash;
+  location = anchorsArray[i].attributes[3].value;
+
   currentPageInner(i);
   onChangeScaleCircle(i);
   getColor(i);
@@ -51,13 +52,13 @@ function scrollTop() {
   if (i < 0) {
     i = 0;
   }
-  location = anchorsArray[i].hash;
+  location = anchorsArray[i].attributes[3].value;
   currentPageInner(i);
   onChangeScaleCircle(i);
   getColor(i);
 }
 
-document.onkeydown = function(e) {
+document.onkeydown = function (e) {
   switch (e.keyCode) {
     case 38:
       scrollTop();
